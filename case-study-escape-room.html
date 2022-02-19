@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Case study: escape room redesign — Michael Klepacki</title>
+		<meta name="description" content="When business desires and user needs don’t align.">
+		<link rel="image_src" href="img/case-study-escape-room/thumbnail.png">
+		<meta property="og:title" content="Case study: escape room redesign — Michael Klepacki">
+		<meta property="og:description" content="When business desires and user needs don’t align.">
+		<meta property="og:image" content="img/case-study-escape-room/thumbnail.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- FAVICONS -->
+		<link rel="shortcut icon" type="image/png" href="img/favicon/favicon-32.png" sizes="32x32">
+		<link rel="shortcut icon" type="image/png" href="img/favicon/favicon-128.png" sizes="128x128">
+		<link rel="shortcut icon" type="image/png" href="img/favicon/favicon-152.png" sizes="152x152">
+		<link rel="shortcut icon" type="image/png" href="img/favicon/favicon-167.png" sizes="167x167">
+		<link rel="shortcut icon" type="image/png" href="img/favicon/favicon-180.png" sizes="180x180">
+		<link rel="shortcut icon" type="image/png" href="img/favicon/favicon-192.png" sizes="192x192">
+		<link rel="shortcut icon" type="image/png" href="img/favicon/favicon-196.png" sizes="196x196">
+		<!-- STYLE SHEETS -->
+		<link rel="stylesheet" href="css/main.css">
+    	<link rel="stylesheet" href="css/responsive.css">
+    	<!-- SCRIPTS -->
+		<script async src="js/mobile-nav.js"></script>
+		<script async src="js/progress-bar.js"></script>
+		<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script defer src="js/anchor-smooth-scroll.js"></script>
+		<!-- CLOUDFLARE WEB ANALYTICS -->
+		<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "05b4999771034daf902d2a8f682c6b5d"}'></script>
+	</head>
+	<body>
+		<!---------- HEADER ---------->
+		<header>
+			<div id="logo">
+				<a href="index.html">
+					<svg width="auto" height="auto" viewBox="0 0 186 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M105.038 27H107.792L111.446 16.29L111.284 27H113.696L113.714 14.022H109.808L106.442 24.39L103.166 14.022H99.26V27H101.654L101.51 16.254L105.038 27Z" fill="#414347"/><path d="M117.05 27H119.498V14.022H117.05V27Z" fill="#414347"/><path d="M127.875 27.252C131.151 27.252 132.897 25.956 132.951 22.248H130.539C130.431 24.426 129.459 25.092 127.857 25.092C125.697 25.092 124.851 23.868 124.851 20.52C124.851 17.19 125.715 15.93 127.893 15.93C129.513 15.93 130.467 16.65 130.557 18.864H132.969C132.933 15.138 131.205 13.77 127.893 13.77C123.951 13.77 122.349 15.84 122.349 20.52C122.349 25.182 123.915 27.252 127.875 27.252Z" fill="#414347"/><path d="M143.443 27H145.891V14.022H143.443V19.242H138.187V14.022H135.739V27H138.187V21.474H143.443V27Z" fill="#414347"/><path d="M148.071 27H150.681L151.455 24.552H156.873L157.665 27H160.275L155.631 14.022H152.697L148.071 27ZM152.175 22.302L154.137 16.2L156.135 22.302H152.175Z" fill="#414347"/><path d="M162.443 27H171.083V24.768H164.891V21.564H170.075V19.314H164.891V16.254H170.975V14.022H162.443V27Z" fill="#414347"/><path d="M174.004 27H181.78V24.75H176.452V14.022H174.004V27Z" fill="#414347"/><path d="M99.26 47H101.708V44.264L104.012 41.348L107.072 47H109.844L105.524 39.404L109.772 34.022H106.856L101.708 41.006V34.022H99.26V47Z" fill="#414347"/><path d="M112.023 47H119.799V44.75H114.471V34.022H112.023V47Z" fill="#414347"/><path d="M122.044 47H130.684V44.768H124.492V41.564H129.676V39.314H124.492V36.254H130.576V34.022H122.044V47Z" fill="#414347"/><path d="M133.155 47H135.603V42.95H137.853C141.993 42.95 143.325 42.032 143.325 38.468C143.325 34.922 141.993 34.022 137.853 34.022H133.155V47ZM135.603 40.7V36.254H138.195C139.977 36.254 140.805 36.434 140.805 38.45C140.805 40.484 140.031 40.7 138.195 40.7H135.603Z" fill="#414347"/><path d="M143.381 47H145.991L146.765 44.552H152.183L152.975 47H155.585L150.941 34.022H148.007L143.381 47ZM147.485 42.302L149.447 36.2L151.445 42.302H147.485Z" fill="#414347"/><path d="M162.354 47.252C165.63 47.252 167.376 45.956 167.43 42.248H165.018C164.91 44.426 163.938 45.092 162.336 45.092C160.176 45.092 159.33 43.868 159.33 40.52C159.33 37.19 160.194 35.93 162.372 35.93C163.992 35.93 164.946 36.65 165.036 38.864H167.448C167.412 35.138 165.684 33.77 162.372 33.77C158.43 33.77 156.828 35.84 156.828 40.52C156.828 45.182 158.394 47.252 162.354 47.252Z" fill="#414347"/><path d="M170.217 47H172.665V44.264L174.969 41.348L178.029 47H180.801L176.481 39.404L180.729 34.022H177.813L172.665 41.006V34.022H170.217V47Z" fill="#414347"/><path d="M182.98 47H185.428V34.022H182.98V47Z" fill="#414347"/><path fill-rule="evenodd" clip-rule="evenodd" d="M0 3V51C1.64929e-05 55.9705 4.02945 60 9 60L81 60C81 60 81 60 81 60C85.9706 60 90.0001 55.9705 90.0001 51C90.0001 50.9863 90.0001 50.9726 90 50.9589V3C90 1.34315 88.6569 0 87 0C86.4243 0 85.8864 0.16218 85.4296 0.443346L39.1827 27.9025L4.88679 0.667487C4.3714 0.250061 3.7149 0 3 0C1.34315 0 0 1.34315 0 3ZM62.3981 54L6 9.21326V51C6.00002 52.6568 7.34316 54 9 54L62.3981 54ZM84.0001 51L84 8.27011L44.2105 31.8951L72.0463 54L81.0001 54C82.6569 54 84.0001 52.6568 84.0001 51Z" fill="#414347"/></svg>
+					<!-- <p style="font-weight: 400;line-height: 1.1; color: #3B332F;">michael<br>klepacki</p> -->
+				</a>
+			</div>
+			<!----- NAVIGATION ----->
+			<nav id="topNav">
+				<div id="mainNav">
+					<a href="index.html">← Work</a>
+					<a href="play.html">Play</a>
+					<a href="about.html">About</a>
+					<a href="contact.html">Contact</a>
+				</div>
+				<div id="secondaryNav">
+					<p class="secondary-nav-container">
+						On this page
+					</p>
+					<div class="secondary-nav-items">
+						<a href="#intro" class="folder-page">Intro</a>
+						<a href="#research" class="folder-page">Research</a>
+						<a href="#ideation" class="folder-page">Ideation</a>
+						<a href="#iteration" class="folder-page">Iteration</a>
+						<a href="#delivery" class="folder-page">Delivery</a>
+						<a href="#retro" class="folder-page">Retrospective</a>
+					</div>
+				</div>
+			</nav>
+			<!----- MOBILE NAV MENU ----->
+  			<a href="javascript:void(0);" id="navIcon" onclick="toggleMobileNav()">Menu</a>
+		    <!----- DESKTOP FOOTER ----->
+		    <div id="footer">
+    			<p>&copy; 2022 Michael Klepacki.<br>Built from scratch with love, sweat, & tears.</p>
+    		</div>
+		</header>
+		<!---------- PROGRESS BAR ---------->
+		<div id="progressBar"></div>
+		<!---------- PAGE ---------->
+		<main id="pageWrapper">
+			<article>
+				<!---- BRIEF ---->
+				<section id="intro">
+					<div class="text-wrapper">
+						<h1>Case study: redesigning an escape room booking experience</h1>
+						<p class="lede">Local shops and practitioners are suffering a decrease in demand for their services and products due to the extreme situation Covid-19 has pushed worldwide. Help a local shop <strong>improve their online presence</strong> to be more competitive in the evolving market.</p>
+						<div class="row">
+							<div class="column">
+								<h4>Time</h4>
+								<p>8 days</p>
+							</div>
+							<div class="column">
+								<h4>Role</h4>
+								<p>UX/UI Design</p>
+							</div>
+							<div class="column">
+								<h4>Team</h4>
+								<p>Anne Cottereau (UX/UI)
+								<br>Jacqueline Coriano (UX/UI)
+								<br>Mouna Ameziane (UX/UI)</p>
+							</div>
+						</div>
+					</div>
+					<div class="img-wrapper">
+						<img 
+							srcset="img/case-study-escape-room/cinevasionPeek-640.png 640w,
+									img/case-study-escape-room/cinevasionPeek-768.png 768w,
+									img/case-study-escape-room/cinevasionPeek-1024.png 1024w,
+									img/case-study-escape-room/cinevasionPeek-1336.png 1336w,
+									img/case-study-escape-room/cinevasionPeek-1600.png 1600w,
+									img/case-study-escape-room/cinevasionPeek.png 1920w"
+							sizes="(max-width: 640px) 640px,
+									(max-width: 768px) 768px,
+									(max-width: 1024px) 1024px,
+									(max-width: 1336px) 1336px,
+									(max-width: 1600px) 1600px,
+									1920px"
+							src="img/case-study-escape-room/cinevasionPeek.png"
+							alt="The new mid-fi design for the booking page, with the current design peeking out from behind."
+						>
+					</div>
+					<div class="text-wrapper">
+						<h3>The client</h3>
+						<p>Cinévasion is an escape room in Paris near Montparnasse. In addition to their 3 escape rooms, they also offer a private cinema that can be rented for up to 20 people. In our stakeholder interview with co-owner Philippe, we were told that the escape rooms are the core business, but that he felt there was potential to further develop the private cinema. The current website leaves a lot to be desired, and the owners hope to increase conversion.</p>
+						<p>For our 8-day sprint we would only be delivering a <strong>mid-fidelity prototype</strong>, focusing on restructuring the information architecture and improving user flow.</p>
+						<h3>The current experience</h3>
+						<p>The welcome page is extremely long with redundant sections like Contact, which has its own page that can be found in the navigation bar.</p>
+					</div>
+					<div class="img-wrapper">
+						<img 
+							srcset="img/case-study-escape-room/currentHome-640.png 640w,
+									img/case-study-escape-room/currentHome-768.png 768w,
+									img/case-study-escape-room/currentHome-1024.png 1024w,
+									img/case-study-escape-room/currentHome-1336.png 1336w,
+									img/case-study-escape-room/currentHome-1600.png 1600w,
+									img/case-study-escape-room/currentHome.png 1920w"
+							sizes="(max-width: 640px) 640px,
+									(max-width: 768px) 768px,
+									(max-width: 1024px) 1024px,
+									(max-width: 1336px) 1336px,
+									(max-width: 1600px) 1600px,
+									1920px"
+							src="img/case-study-escape-room/currentHome.png"
+							alt="Scrolling through the current home page."
+						>
+					</div>
+					<div class="text-wrapper">
+						<p>The pages for the escape rooms themselves leave much to be desired, short on both helpful info and visuals.</p>
+					</div>
+					<div class="img-wrapper">
+						<img 
+							srcset="img/case-study-escape-room/currentRooms-640.png 640w,
+									img/case-study-escape-room/currentRooms-768.png 768w,
+									img/case-study-escape-room/currentRooms-1024.png 1024w,
+									img/case-study-escape-room/currentRooms-1336.png 1336w,
+									img/case-study-escape-room/currentRooms-1600.png 1600w,
+									img/case-study-escape-room/currentRooms.png 1920w"
+							sizes="(max-width: 640px) 640px,
+									(max-width: 768px) 768px,
+									(max-width: 1024px) 1024px,
+									(max-width: 1336px) 1336px,
+									(max-width: 1600px) 1600px,
+									1920px"
+							src="img/case-study-escape-room/currentRooms.png"
+							alt="Looking at the current pages for the individual escape rooms."
+						>
+					</div>
+					<div class="text-wrapper">
+						<p>The current booking and checkout pages push the info the user needs far too low on the page (below the fold for many monitors), and have sections that feel like they come from a completely different website.</p>
+					</div>
+					<div class="img-wrapper">
+						<img 
+							srcset="img/case-study-escape-room/currentBooking-640.png 640w,
+									img/case-study-escape-room/currentBooking-768.png 768w,
+									img/case-study-escape-room/currentBooking-1024.png 1024w,
+									img/case-study-escape-room/currentBooking-1336.png 1336w,
+									img/case-study-escape-room/currentBooking-1600.png 1600w,
+									img/case-study-escape-room/currentBooking.png 1920w"
+							sizes="(max-width: 640px) 640px,
+									(max-width: 768px) 768px,
+									(max-width: 1024px) 1024px,
+									(max-width: 1336px) 1336px,
+									(max-width: 1600px) 1600px,
+									1920px"
+							src="img/case-study-escape-room/currentBooking.png"
+							alt="The current pages for the Booking and Checkout process."
+						>
+					</div>
+				</section>
+				<!---- RESEARCH ---->
+				<section id="research">
+					<div class="text-wrapper">
+						<h2>Research</h2>
+						<p>We conducted interviews and ran usability tests of the current site with 5 escape room attendees of various dedication. Here’s what they had to say:</p>
+						<ul class="key-quotes">
+							<li><span class="big-quote">“</span>I feel overwhelmed and lost when I see this much information on a website.”</li>
+							<li><span class="big-quote">“</span>The business should focus more on the escape room—that’s why I’m here!”</li>
+							<li><span class="big-quote">“</span>When I see a website like this, I close the window.”</li>
+						</ul>
+						<p>We also distributed a <a target="blank" href="https://forms.gle/cmwQbt9Lh8dEPjWM8">survey</a>. From its 132 responses, we learned:</p>
+						<ul class="key-points">
+							<li>72% have already been to an escape room, and 83% of those who haven’t would like to</li>
+							<li>83% of those who have been to an escape room book their rooms online</li>	
+						</ul>
+						<p>Responding to questions about group movie-watching habits and private cinema offers:</p>
+						<ul class="key-points">
+							<li>57% go to the cinema less than twice a year</li>
+							<li>only 6% are willing to pay more than 25€ to rent a private cinema</li>
+						</ul>
+						<h3>Advocating for the user</h3>
+						<p>Across those interviewed, immersion into a theme was the most important aspect of an escape room. Cinévasion’s movie-inspired rooms were a plus. But the private cinema offer was confusing with a byzantine booking page, and distracted from visitors’ primary objective—to book an escape room.</p>
+						<p>Even with a better site, though, the offer just wasn’t that tempting. Our interviewees preferred to watch movies with small groups at most, and would typically rather watch them at home. The larger a group gets, the harder it becomes to agree on a film.</p>
+						<p>We used these findings to craft a user persona that we would refer back to throughout our process. David would be our guiding light as we sought our solution.</p>
+					</div>
+					<div class="img-wrapper">
+						<img 
+							srcset="img/case-study-escape-room/persona-640.png 640w,
+									img/case-study-escape-room/persona-768.png 768w,
+									img/case-study-escape-room/persona-1024.png 1024w,
+									img/case-study-escape-room/persona-1336.png 1336w,
+									img/case-study-escape-room/persona-1600.png 1600w,
+									img/case-study-escape-room/persona.png 1920w"
+							sizes="(max-width: 640px) 640px,
+									(max-width: 768px) 768px,
+									(max-width: 1024px) 1024px,
+									(max-width: 1336px) 1336px,
+									(max-width: 1600px) 1600px,
+									1920px"
+							src="img/case-study-escape-room/persona.png"
+							alt="Our persona, David, a 27-year-old Data Manager who just wants to enjoy an escape room with some friends on the weekend after months of Covid-19 lockdowns."
+						>
+					</div>
+					<div class="text-wrapper">
+						<p>Contrary to Philippe’s assumptions, there simply wasn’t much of a market for the private cinema. The interest in the escape rooms themselves, though, were very promising. Our research showed that return rate of escape-room-goers was extremely high, as was interest in escape rooms from those who’d never been.</p>
+						<p>In order to capitalize on this market opportunity though, we would need to improve the experience of Cinévasion’s site visitors.</p>
+					</div>
+					<div class="img-wrapper">
+						<img 
+							srcset="img/case-study-escape-room/userJourney-640.png 640w,
+									img/case-study-escape-room/userJourney-768.png 768w,
+									img/case-study-escape-room/userJourney-1024.png 1024w,
+									img/case-study-escape-room/userJourney-1336.png 1336w,
+									img/case-study-escape-room/userJourney-1600.png 1600w,
+									img/case-study-escape-room/userJourney.png 1920w"
+							sizes="(max-width: 640px) 640px,
+									(max-width: 768px) 768px,
+									(max-width: 1024px) 1024px,
+									(max-width: 1336px) 1336px,
+									(max-width: 1600px) 1600px,
+									1920px"
+							src="img/case-study-escape-room/userJourney.png"
+							alt="The current user journey of booking an escape room with Cinévasion. David begins by going to Cinévasion’s website, excited to try a new escape room. He is overwhelmed though by too much info on the home page. He manages to find a room that looks promising, his mood picking back up, before he is quickly angered by the payment options. He must either pay the full amount now, or call if he’d prefer to simply pay a deposit, so that his friends can pay the rest upon arrival—a common practice for escape rooms. Finally, David decides to pay the full amount and message his friends. He books the room, hoping it will be better than the website. "
+						>
+					</div>
+					<div class="text-wrapper">
+						<h3>Problem statement</h3>
+						<p>Escape room enthusiasts need a way to <strong>more efficiently navigate Cinévasion’s website to book an escape room</strong> because they currently get overwhelmed and lost within the site.</p>
+						<p>We believe that <strong>streamlining and better structuring the site’s information</strong> will lead to better booking rates.</p>
+					</div>
+				</section>
+				<!---- IDEATION ---->
+				<section id="ideation">
+					<div class="text-wrapper">
+						<h2>Ideation</h2>
+						<p>Guided by our research, we set the following goals for our redesign.</p>
+						<h3>Home page</h3>
+						<ul>
+							<li>Simplify the home page, removing redundant elements and making the escape rooms the primary focus.</li>
+						</ul>
+						<h3>Navigation</h3>
+						<ul>
+							<li>Condense the extensive navbar, folding redundant elements into related pages. <i>(The English version of the site wasn’t quite as bad, but the French version could barely fit across my monitor, including two extra options and lengthier wording.)</i></li>
+						</ul>
+					</div>
+					<div class="img-wrapper">
+						<img 
+							srcset="img/case-study-escape-room/navbar-640.png 640w,
+									img/case-study-escape-room/navbar-768.png 768w,
+									img/case-study-escape-room/navbar-1024.png 1024w,
+									img/case-study-escape-room/navbar-1336.png 1336w,
+									img/case-study-escape-room/navbar-1600.png 1600w,
+									img/case-study-escape-room/navbar.png 1920w"
+							sizes="(max-width: 640px) 640px,
+									(max-width: 768px) 768px,
+									(max-width: 1024px) 1024px,
+									(max-width: 1336px) 1336px,
+									(max-width: 1600px) 1600px,
+									1920px"
+							src="img/case-study-escape-room/navbar.png"
+							alt="The site’s current navigation bar. Options read: Escape Games, Cinéma / Louez Notre Salle de Projection, Événements, Cadeaux, FAQ, News, Contact, Inscape Game. Also a language toggle and a 'Réserver' call-to-action. Some links are divided across two lines."
+						>
+					</div>
+					<div class="text-wrapper">
+						<h3>Escape room pages</h3>
+						<ul>
+							<li>Add extra visuals to enhance immersion.</li>
+							<li>Add more glanceable, usable info.</li>
+						</ul>
+						<h3>Booking</h3>
+						<ul>
+							<li>The booking buttons from individual room pages should take you directly to booking that room. The Book button in the top navigation can stay as-is, allowing you to book any room.</li>
+							<li>Simplify the booking experience: select a room, select your day and time, select number of players.</li>
+						</ul>
+						<h3>Checkout</h3>
+						<ul>
+							<li>Allow user to pay only a deposit from the website, in addition to the full booking cost.</li>
+						</ul>
+						<p>We started by sketching out some low-fidelity screens.</p>
+					</div>
+					<div class="img-wrapper">
+						<img
+							srcset="img/case-study-escape-room/lowFiOptions-640.png 640w,
+									img/case-study-escape-room/lowFiOptions-768.png 768w,
+									img/case-study-escape-room/lowFiOptions-1024.png 1024w,
+									img/case-study-escape-room/lowFiOptions-1336.png 1336w,
+									img/case-study-escape-room/lowFiOptions-1600.png 1600w,
+									img/case-study-escape-room/lowFiOptions.png 1920w"
+							sizes="(max-width: 640px) 640px,
+									(max-width: 768px) 768px,
+									(max-width: 1024px) 1024px,
+									(max-width: 1336px) 1336px,
+									(max-width: 1600px) 1600px,
+									1920px"
+							src="img/case-study-escape-room/lowFiOptions.png"
+							alt="A/B low-fidelity options for the 'Escape Rooms' page, showing all three escape rooms and links to details of each room. Option A has higher information density while option B has larger images for each room."
+						>
+					</div>	
+					<div class="img-wrapper">
+						<img
+							srcset="img/case-study-escape-room/lowFiScreens-640.png 640w,
+									img/case-study-escape-room/lowFiScreens-768.png 768w,
+									img/case-study-escape-room/lowFiScreens-1024.png 1024w,
+									img/case-study-escape-room/lowFiScreens-1336.png 1336w,
+									img/case-study-escape-room/lowFiScreens-1600.png 1600w,
+									img/case-study-escape-room/lowFiScreens.png 1920w"
+							sizes="(max-width: 640px) 640px,
+									(max-width: 768px) 768px,
+									(max-width: 1024px) 1024px,
+									(max-width: 1336px) 1336px,
+									(max-width: 1600px) 1600px,
+									1920px"
+							src="img/case-study-escape-room/lowFiScreens.png"
+							alt="Our low-fidelity sketches of a booking user flow. Moving from the home page, to a page showing all three rooms, to a page with details of an individual room, to a booking modal window."
+						>
+					</div>
+				</section>
+				<!---- ITERATION ---->
+				<section id="iteration">
+					<div class="text-wrapper">
+						<h2>Iterations</h2>
+						<p>We ran usability tests on our low-fi sketches, which led to our first version of a mid-fi prototype.</p>
+					</div>
+					<div class="img-wrapper">
+						<img
+							srcset="img/case-study-escape-room/midFiFlowV1-640.png 640w,
+									img/case-study-escape-room/midFiFlowV1-768.png 768w,
+									img/case-study-escape-room/midFiFlowV1-1024.png 1024w,
+									img/case-study-escape-room/midFiFlowV1-1336.png 1336w,
+									img/case-study-escape-room/midFiFlowV1-1600.png 1600w,
+									img/case-study-escape-room/midFiFlowV1.png 1920w"
+							sizes="(max-width: 640px) 640px,
+									(max-width: 768px) 768px,
+									(max-width: 1024px) 1024px,
+									(max-width: 1336px) 1336px,
+									(max-width: 1600px) 1600px,
+									1920px"
+							src="img/case-study-escape-room/midFiFlowV1.png"
+							alt="Screens from our mid-fidelity prototype of the Booking flow. The home page has been streamlined, with escape rooms at the top. We went with option A for the Escape Rooms page, with greater info density. The Room Details page features quick info, more images, and reviews. A floating action button to book the room is always available near the bottom of the window. Clicking this brings up a modal window to book the room."
+						>
+					</div>
+					<div class="img-wrapper">
+						<img
+							srcset="img/case-study-escape-room/midFiQuickBookFlowV1-640.png 640w,
+									img/case-study-escape-room/midFiQuickBookFlowV1-768.png 768w,
+									img/case-study-escape-room/midFiQuickBookFlowV1-1024.png 1024w,
+									img/case-study-escape-room/midFiQuickBookFlowV1-1336.png 1336w,
+									img/case-study-escape-room/midFiQuickBookFlowV1-1600.png 1600w,
+									img/case-study-escape-room/midFiQuickBookFlowV1.png 1920w"
+							sizes="(max-width: 640px) 640px,
+									(max-width: 768px) 768px,
+									(max-width: 1024px) 1024px,
+									(max-width: 1336px) 1336px,
+									(max-width: 1600px) 1600px,
+									1920px"
+							src="img/case-study-escape-room/midFiQuickBookFlowV1.png"
+							alt="Screens from our mid-fi prototype of the Quick Book flow. Return visitors can book a room straight from the home page, with a 'Book a Room' CTA in the navbar. This brings users to a Booking page where they select a room, date/time, team size, and language. From here, they're brought to the Checkout page, with the ability to pay in full or just a deposit."
+						>
+					</div>
+					<div class="text-wrapper">
+						<p>More usability tests helped us refine our prototype further.</p>
+						<h3>Checking out the rooms</h3>
+						<ul>
+							<li>We merged the top image banner and the carousel below, keeping the visuals in one location.</li>
+							<li>We also moved the story details up to just below the images, because visuals are nothing without a story if we want to truly immerse visitors in a cinematic world.</li>
+							<li>Testers loved the floating action button to book a room. However, they were disturbed that the cost to book wasn’t listed anywhere—so we added it right to the button.</li>
+						</ul>
+					</div>
+					<div class="img-wrapper">
+						<img
+							srcset="img/case-study-escape-room/roomDetailsIteration-640.png 640w,
+									img/case-study-escape-room/roomDetailsIteration-768.png 768w,
+									img/case-study-escape-room/roomDetailsIteration-1024.png 1024w,
+									img/case-study-escape-room/roomDetailsIteration-1336.png 1336w,
+									img/case-study-escape-room/roomDetailsIteration-1600.png 1600w,
+									img/case-study-escape-room/roomDetailsIteration.png 1920w"
+							sizes="(max-width: 640px) 640px,
+									(max-width: 768px) 768px,
+									(max-width: 1024px) 1024px,
+									(max-width: 1336px) 1336px,
+									(max-width: 1600px) 1600px,
+									1920px"
+							src="img/case-study-escape-room/roomDetailsIteration.png"
+							alt="A comparison of our Room Details page before and after iterations. 1. Added the booking cost to the floating action button. 2. Merged the top image banner and the carousel into a top carousel banner. 3. Moved story details higher, just under the image carousel, to push immersion. The floating action button was a hit amongst testers, and they also loved the links to other rooms at the bottom of the page."
+						>
+					</div>
+					<div class="text-wrapper">
+						<h3>Two disparate booking flows</h3>
+						<p>Our booking and checkout flows were an improvement over the original, but users were still getting confused. A large part of this problem was because the reservation process was completely different if you decided to book from the CTA in the navigation bar, or from one of the individual room pages. We had two needlessly distinct booking flows, each with their own issues.</p>
+					</div>
+					<div class="img-wrapper">
+						<img
+							srcset="img/case-study-escape-room/checkoutFlowIteration-640.png 640w,
+									img/case-study-escape-room/checkoutFlowIteration-768.png 768w,
+									img/case-study-escape-room/checkoutFlowIteration-1024.png 1024w,
+									img/case-study-escape-room/checkoutFlowIteration-1336.png 1336w,
+									img/case-study-escape-room/checkoutFlowIteration-1600.png 1600w,
+									img/case-study-escape-room/checkoutFlowIteration.png 1920w"
+							sizes="(max-width: 640px) 640px,
+									(max-width: 768px) 768px,
+									(max-width: 1024px) 1024px,
+									(max-width: 1336px) 1336px,
+									(max-width: 1600px) 1600px,
+									1920px"
+							src="img/case-study-escape-room/checkoutFlowIteration.png"
+							alt="A comparison of our user flow for booking a room before and after iterations. The process has been streamlined, with nearly the same steps regardless of point-of-entry. The first step—picking a room—is now simply auto-completed if booking from a room’s page."
+						>
+					</div>
+					<div class="text-wrapper">
+						<p>We merged the two booking forms into one and improved upon it.</p>
+						<ul>
+							<li>Made the time selector more obviously clickable.</li>
+							<li>Added progressive disclosure to keep the page feeling lighter and therefore not overwhelming the user.</li>
+							<li>The first step on the booking page—selecting a room—is autocompleted for the user if coming from an individual room’s page.</li>
+						</ul>
+					</div>
+					<div class="img-wrapper">
+						<img
+							srcset="img/case-study-escape-room/bookingIteration-640.gif 640w,
+									img/case-study-escape-room/bookingIteration-768.gif 768w,
+									img/case-study-escape-room/bookingIteration-1024.gif 1024w,
+									img/case-study-escape-room/bookingIteration-1336.gif 1336w,
+									img/case-study-escape-room/bookingIteration-1600.gif 1600w,
+									img/case-study-escape-room/bookingIteration.gif 1920w"
+							sizes="(max-width: 640px) 640px,
+									(max-width: 768px) 768px,
+									(max-width: 1024px) 1024px,
+									(max-width: 1336px) 1336px,
+									(max-width: 1600px) 1600px,
+									1920px"
+							src="img/case-study-escape-room/bookingIteration.gif"
+							alt="A comparison of our Booking pages, before and after iterations. Before, a booking page if coming from the navbar, and a totally different booking modal if coming from an individual room’s page. Now, a Booking page with progressive disclosure of each step: select a room; select a date & time; select team size; select language. Then, a summary of their order and buttons to 'Pay Full Amount' or 'Pay Deposit'."
+						>
+					</div>
+				</section>
+				<!---- DELIVERY ---->
+				<section id="delivery">
+					<div class="text-wrapper">
+						<h2>Delivery</h2>
+						<p>These iterations, and especially the updated booking flow, tested extremely well—across both new testers and those we’d interviewed who’d tested the existing site. With some extra polishing and fixes for cohesion, we had our final flow.</p>
+					</div>
+					<div class="img-wrapper">
+						<img
+							srcset="img/case-study-escape-room/finalMidFi-640.png 640w,
+									img/case-study-escape-room/finalMidFi-768.png 768w,
+									img/case-study-escape-room/finalMidFi-1024.png 1024w,
+									img/case-study-escape-room/finalMidFi-1336.png 1336w,
+									img/case-study-escape-room/finalMidFi-1600.png 1600w,
+									img/case-study-escape-room/finalMidFi.png 1920w"
+							sizes="(max-width: 640px) 640px,
+									(max-width: 768px) 768px,
+									(max-width: 1024px) 1024px,
+									(max-width: 1336px) 1336px,
+									(max-width: 1600px) 1600px,
+									1920px"
+							src="img/case-study-escape-room/finalMidFi.png"
+							alt="Our finalized screens from our mid-fidelity prototype: Home page, Escape Rooms page, Room Details page, Booking page, and Checkout page."
+						>
+					</div>
+					<div class="text-wrapper">
+						<p>We met the goals we’d set from our research by:</p>
+						<ol>
+							<li><span>Removing unnecessary and redundant info from the home page and placing the escape rooms right up top.</span></li>
+							<li><span>Condensing the navigation bar so that it included only the essentials, with easy-to-understand labels.</span></li>
+							<li><span>Created more immersive and informative pages for the individual escape rooms with additional visuals and glanceable quick info.</span></li>
+							<li><span>Greatly streamlining the booking process with the ability to book a room either directly from the navbar or from the escape room pages.</span></li>
+							<li><span>Giving users the option to pay the full cost upfront or just a deposit while booking to meet the needs of booking for a large group.</span></li>
+						</ol>
+						<p>You can try the prototype yourself below.</p>
+					</div>
+					<div class="img-wrapper">
+						<iframe class="figma-embed" loading="lazy" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FrWkdOY4F4f4HHKelrT7hUP%2FProject-2-%252F-MID-FI-wireframe-(Copy)%3Fpage-id%3D428%253A385%26node-id%3D428%253A2407%26viewport%3D241%252C48%252C0.07%26scaling%3Dscale-down-width%26starting-point-node-id%3D428%253A2407" allowfullscreen></iframe>
+					</div>
+				</section>
+				<!---- RETRO ---->
+				<section id="retro">
+					<div class="text-wrapper">
+						<h2>Retrospective</h2>
+						<p>With more time, we could move into the high-fidelity stage and apply paint to our mid-fi designs. Further market research, ideation, and desirability tests would allow us to update Cinévasion’s visual branding and apply this to the prototype. From here, we could move on to handoff.</p>
+						<p>We could also conduct further research and redesign the pages for the private cinema and events.</p>
+						<p>This project was a great exercise in heavy research of all kinds. When analyzing an existing product, we had to start with heuristics evaluation and usability testing right up front, in addition to user research and market research and positioning.</p>
+						<p>It was also a great poster child for the importance of User-Centered Design. Our research led us to recognize that there was a gap in business desires and user priorities. The current site was not satisfactorily taking care of visitors’ primary goal—to book an escape room—and interest in the cinema offer was low. We presented the findings to the stakeholders and secured the go-ahead to put the user first.</p>
+					</div>
+				</section>
+			</article>
+			<!---------- READ MORE LINKS ---------->
+			<div class="read-more-links">
+				<div class="read-prev">
+					<a href="case-study-spotify.html">
+						<h5>← Newer</h5>
+						<p>Case study: adding a feature to Spotify</p>
+					</a>
+				</div>
+				<div class="read-next">
+				</div>
+			</div>
+		</main>
+		<!---------- MOBILE FOOTER ---------->
+		<div id="mobileFooter">
+			<p>&copy; 2021 Michael Klepacki. All rights reserved.<br>Built from scratch with love, sweat, & tears.</p>
+		</div>
+	</body>
+</html>

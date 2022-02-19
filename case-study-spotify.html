@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Case study: adding a feature to Spotify — Michael Klepacki</title>
+		<meta name="description" content="Adding a new feature to a highly-adopted app and working within an existing design system.">
+		<meta property="og:title" content="Case study: adding a feature to Spotify — Michael Klepacki">
+		<meta property="og:description" content="Adding a new feature to a highly-adopted app and working within an existing design system.">
+		<meta property="og:image" content="img/case-study-spotify/thumbnail.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- FAVICONS -->
+		<link rel="shortcut icon" type="image/png" href="img/favicon/favicon-32.png" sizes="32x32">
+		<link rel="shortcut icon" type="image/png" href="img/favicon/favicon-128.png" sizes="128x128">
+		<link rel="shortcut icon" type="image/png" href="img/favicon/favicon-152.png" sizes="152x152">
+		<link rel="shortcut icon" type="image/png" href="img/favicon/favicon-167.png" sizes="167x167">
+		<link rel="shortcut icon" type="image/png" href="img/favicon/favicon-180.png" sizes="180x180">
+		<link rel="shortcut icon" type="image/png" href="img/favicon/favicon-192.png" sizes="192x192">
+		<link rel="shortcut icon" type="image/png" href="img/favicon/favicon-196.png" sizes="196x196">
+		<!-- STYLE SHEETS -->
+		<link rel="stylesheet" href="css/main.css">
+    	<link rel="stylesheet" href="css/responsive.css">
+    	<!-- SCRIPTS -->
+    	<script async src="js/mobile-nav.js"></script>
+		<script async src="js/progress-bar.js"></script>
+    	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script defer src="js/anchor-smooth-scroll.js"></script>
+		<!-- CLOUDFLARE WEB ANALYTICS -->
+		<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "05b4999771034daf902d2a8f682c6b5d"}'></script>
+	</head>
+	<body>
+		<!---------- HEADER ---------->
+		<header>
+			<div id="logo">
+				<a href="index.html">
+					<svg width="auto" height="auto" viewBox="0 0 186 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M105.038 27H107.792L111.446 16.29L111.284 27H113.696L113.714 14.022H109.808L106.442 24.39L103.166 14.022H99.26V27H101.654L101.51 16.254L105.038 27Z" fill="#414347"/><path d="M117.05 27H119.498V14.022H117.05V27Z" fill="#414347"/><path d="M127.875 27.252C131.151 27.252 132.897 25.956 132.951 22.248H130.539C130.431 24.426 129.459 25.092 127.857 25.092C125.697 25.092 124.851 23.868 124.851 20.52C124.851 17.19 125.715 15.93 127.893 15.93C129.513 15.93 130.467 16.65 130.557 18.864H132.969C132.933 15.138 131.205 13.77 127.893 13.77C123.951 13.77 122.349 15.84 122.349 20.52C122.349 25.182 123.915 27.252 127.875 27.252Z" fill="#414347"/><path d="M143.443 27H145.891V14.022H143.443V19.242H138.187V14.022H135.739V27H138.187V21.474H143.443V27Z" fill="#414347"/><path d="M148.071 27H150.681L151.455 24.552H156.873L157.665 27H160.275L155.631 14.022H152.697L148.071 27ZM152.175 22.302L154.137 16.2L156.135 22.302H152.175Z" fill="#414347"/><path d="M162.443 27H171.083V24.768H164.891V21.564H170.075V19.314H164.891V16.254H170.975V14.022H162.443V27Z" fill="#414347"/><path d="M174.004 27H181.78V24.75H176.452V14.022H174.004V27Z" fill="#414347"/><path d="M99.26 47H101.708V44.264L104.012 41.348L107.072 47H109.844L105.524 39.404L109.772 34.022H106.856L101.708 41.006V34.022H99.26V47Z" fill="#414347"/><path d="M112.023 47H119.799V44.75H114.471V34.022H112.023V47Z" fill="#414347"/><path d="M122.044 47H130.684V44.768H124.492V41.564H129.676V39.314H124.492V36.254H130.576V34.022H122.044V47Z" fill="#414347"/><path d="M133.155 47H135.603V42.95H137.853C141.993 42.95 143.325 42.032 143.325 38.468C143.325 34.922 141.993 34.022 137.853 34.022H133.155V47ZM135.603 40.7V36.254H138.195C139.977 36.254 140.805 36.434 140.805 38.45C140.805 40.484 140.031 40.7 138.195 40.7H135.603Z" fill="#414347"/><path d="M143.381 47H145.991L146.765 44.552H152.183L152.975 47H155.585L150.941 34.022H148.007L143.381 47ZM147.485 42.302L149.447 36.2L151.445 42.302H147.485Z" fill="#414347"/><path d="M162.354 47.252C165.63 47.252 167.376 45.956 167.43 42.248H165.018C164.91 44.426 163.938 45.092 162.336 45.092C160.176 45.092 159.33 43.868 159.33 40.52C159.33 37.19 160.194 35.93 162.372 35.93C163.992 35.93 164.946 36.65 165.036 38.864H167.448C167.412 35.138 165.684 33.77 162.372 33.77C158.43 33.77 156.828 35.84 156.828 40.52C156.828 45.182 158.394 47.252 162.354 47.252Z" fill="#414347"/><path d="M170.217 47H172.665V44.264L174.969 41.348L178.029 47H180.801L176.481 39.404L180.729 34.022H177.813L172.665 41.006V34.022H170.217V47Z" fill="#414347"/><path d="M182.98 47H185.428V34.022H182.98V47Z" fill="#414347"/><path fill-rule="evenodd" clip-rule="evenodd" d="M0 3V51C1.64929e-05 55.9705 4.02945 60 9 60L81 60C81 60 81 60 81 60C85.9706 60 90.0001 55.9705 90.0001 51C90.0001 50.9863 90.0001 50.9726 90 50.9589V3C90 1.34315 88.6569 0 87 0C86.4243 0 85.8864 0.16218 85.4296 0.443346L39.1827 27.9025L4.88679 0.667487C4.3714 0.250061 3.7149 0 3 0C1.34315 0 0 1.34315 0 3ZM62.3981 54L6 9.21326V51C6.00002 52.6568 7.34316 54 9 54L62.3981 54ZM84.0001 51L84 8.27011L44.2105 31.8951L72.0463 54L81.0001 54C82.6569 54 84.0001 52.6568 84.0001 51Z" fill="#414347"/></svg>
+				</a>
+			</div>
+			<!----- NAVIGATION ----->
+			<nav id="topNav">
+				<div id="mainNav">
+					<a href="index.html">← Work</a>
+					<a href="play.html">Play</a>
+					<a href="about.html">About</a>
+					<a href="contact.html">Contact</a>
+				</div>
+				<div id="secondaryNav">
+					<p class="secondary-nav-container">
+						On this page
+					</p>
+					<div class="secondary-nav-items">
+						<a href="#brief" class="folder-page">Brief</a>
+						<a href="#research" class="folder-page">Research</a>
+						<a href="#ideation" class="folder-page">Ideation</a>
+						<a href="#iteration" class="folder-page">Iteration</a>
+						<a href="#delivery" class="folder-page">Delivery</a>
+					</div>
+				</div>
+			</nav>
+			<!----- MOBILE NAV MENU ----->
+  			<a href="javascript:void(0);" id="navIcon" onclick="toggleMobileNav()">Menu</a>
+		    <!----- DESKTOP FOOTER ----->
+		    <div id="footer">
+    			<p>&copy; 2022 Michael Klepacki.<br>Built from scratch with love, sweat, & tears.</p>
+    		</div>
+		</header>
+		<!---------- PROGRESS BAR ---------->
+		<div id="progressBar"></div>
+		<!---------- PAGE ---------->
+		<main id="pageWrapper">
+			<article>
+				<!---- BRIEF ---->
+				<section id="brief">
+					<div class="text-wrapper">
+						<h1>Case study: adding a feature to Spotify</h1>
+						<p class="lede">“Analyze an existing and highly-adopted app and incorporate a new feature into an existing product. The feature you develop will be based on an area of functionality to be explored and user research.”</p>
+						<div class="row">
+							<div class="column">
+								<h4>Time</h4>
+								<p>1 week</p>
+							</div>
+							<div class="column">
+								<h4>Role</h4>
+								<p>UX/UI Designer</p>
+							</div>
+							<div class="column">
+								<h4>Team</h4>
+								<p>Alice Debarge (UX/UI)</p>
+							</div>
+						</div>
+					</div>
+					<div class="img-wrapper">
+						<img 
+							srcset="img/case-study-spotify/newFeature-640.jpg 640w,
+									img/case-study-spotify/newFeature-768.jpg 768w,
+									img/case-study-spotify/newFeature-1024.jpg 1024w,
+									img/case-study-spotify/newFeature-1336.jpg 1336w,
+									img/case-study-spotify/newFeature-1600.jpg 1600w,
+									img/case-study-spotify/newFeature-1920.jpg 1920w"
+							sizes="(max-width: 640px) 640px,
+									(max-width: 768px) 768px,
+									(max-width: 1024px) 1024px,
+									(max-width: 1336px) 1336px,
+									(max-width: 1600px) 1600px,
+									1920px"
+							src="img/case-study-spotify/newFeature-1920.jpg"
+							alt="Splash screen on the Spotify iPhone app which reads 'New feature for you!'"
+						>
+					</div>
+					<div class="text-wrapper">
+						<p>My design partner and I both listen to a lot of music, so we chose to work on Spotify—an app we both use and enjoy but felt we could add some value to. We tossed around a few ideas and settled on an alarm function. Mornings are hard for many of us, and alarms… well, they largely suck. They’re abrasive, too soft, and you’ll grow to hate even your favorite songs when they drag you out of blissful sleep morning after morning.</p>
+						<p>So, how to use Spotify to make our mornings a little better? Let’s take our assumptions and verify them. Quickly.</p>
+					</div>
+				</section>
+				<!---- RESEARCH ---->
+				<section id="research">
+					<div class="text-wrapper">
+						<h2>Guerrilla research</h2>
+						<p>The research phase for this project looked a little different for a couple reasons. Firstly, we were working within an existing product with already-defined branding and UI principles. We had to find a way to incorporate our user flow into these established paradigms.</p>
+						<p>So we started by researching Spotify itself. We examined the app and its layout, colors, typography, design systems, tone of voice. To add to the product, we had to first fully understand it. These findings would guide us through our ideation phase and beyond into prototyping and building our solution.</p>
+					</div>
+					<div class="img-wrapper">
+						<img 
+							srcset="img/case-study-spotify/spotifyDesign-640.jpg 640w,
+									img/case-study-spotify/spotifyDesign-768.jpg 768w,
+									img/case-study-spotify/spotifyDesign-1024.jpg 1024w,
+									img/case-study-spotify/spotifyDesign-1336.jpg 1336w,
+									img/case-study-spotify/spotifyDesign-1600.jpg 1600w,
+									img/case-study-spotify/spotifyDesign-1920.jpg 1920w"
+							sizes="(max-width: 640px) 640px,
+									(max-width: 768px) 768px,
+									(max-width: 1024px) 1024px,
+									(max-width: 1336px) 1336px,
+									(max-width: 1600px) 1600px,
+									1920px"
+							src="img/case-study-spotify/spotifyDesign-1920.jpg"
+							alt="Splash screen on the Spotify iPhone app which reads 'New feature for you!'"
+						>
+					</div>
+					<div class="text-wrapper">
+						<p>Secondly, timeline. We had to gain user insight very quickly, which didn’t leave time for in-depth interviews and broad, far-reaching internet surveys. Enter: guerrilla research.</p>
+						<p>We asked some fellow Spotify users—coworkers, friends, friends of friends—what they thought of the idea in general, and also what their current alarm situation was like and if it could be improved. Our big takeaways from those who use alarms in the mornings were:</p>
+						<ul>
+							<li>they want to wake up with good vibes;</li>
+							<li>their current alarm sounds are harsh, annoying, irritating;</li>
+							<li>those who have tried waking up to a song grew to hate the song very quickly, so music is tricky.</li>
+						</ul>
+						<p>This validated our starting assumptions—that we weren’t the only ones dissatisfied with alarm options—and allowed us to move forward with the initial idea.</p>
+					</div>
+					<div class="img-wrapper">
+						<img 
+							srcset="img/case-study-spotify/protopersona-640.jpg 640w,
+									img/case-study-spotify/protopersona-768.jpg 768w,
+									img/case-study-spotify/protopersona-1024.jpg 1024w,
+									img/case-study-spotify/protopersona-1336.jpg 1336w,
+									img/case-study-spotify/protopersona-1600.jpg 1600w,
+									img/case-study-spotify/protopersona-1920.jpg 1920w"
+							sizes="(max-width: 640px) 640px,
+									(max-width: 768px) 768px,
+									(max-width: 1024px) 1024px,
+									(max-width: 1336px) 1336px,
+									(max-width: 1600px) 1600px,
+									1920px"
+							src="img/case-study-spotify/protopersona-1920.jpg"
+							alt="Splash screen on the Spotify iPhone app which reads 'New feature for you!'"
+						>
+					</div>
+					<div class="text-wrapper">
+						<p>From here, we quickly crafted a proto-persona and a problem statement to unify our findings and give ourselves resources to refer back to as we began to ideate for solutions. A couple key things here:</p>
+						<ul>
+							<li>Marie, our persona, is a busy, working professional and heavily leans on pre-made playlists for her music consumption. Personalization is important to her.</li>
+							<li>My design partner and I are both iPhone users, so we decided to focus on the iPhone app for our prototype. This goal was reflected in our problem statement.</li>
+						</ul>
+					</div>
+					<div class="img-wrapper">
+						<img 
+							srcset="img/case-study-spotify/problemStatement-640.jpg 640w,
+									img/case-study-spotify/problemStatement-768.jpg 768w,
+									img/case-study-spotify/problemStatement-1024.jpg 1024w,
+									img/case-study-spotify/problemStatement-1336.jpg 1336w,
+									img/case-study-spotify/problemStatement-1600.jpg 1600w,
+									img/case-study-spotify/problemStatement-1920.jpg 1920w"
+							sizes="(max-width: 640px) 640px,
+									(max-width: 768px) 768px,
+									(max-width: 1024px) 1024px,
+									(max-width: 1336px) 1336px,
+									(max-width: 1600px) 1600px,
+									1920px"
+							src="img/case-study-spotify/problemStatement-1920.jpg"
+							alt="Splash screen on the Spotify iPhone app which reads 'New feature for you!'"
+						>
+					</div>
+				</section>
+				<!---- IDEATION ---->
+				<section id="ideation">
+					<div class="text-wrapper">	
+						<h2>Ideation—working within an existing interface</h2>
+						<p>We began with a round of <a href="https://designsprintkit.withgoogle.com/methodology/phase3-sketch/crazy-8s" target="blank">Crazy 8s</a> to let the ideas flow, and then worked together to pick out the best ideas and moved into crafting a user flow and lo-fi wireframes. Here, we realized finding the flow would be a little more complicated than we’d anticipated.</p>
+						<p>First was the issue of <em>points of entry</em>. Where could we place this feature within Spotify’s existing navigation paradigm without breaking users’ mental models? We agreed it wasn’t a central enough feature to place it in the main tab bar at the bottom of the screen—this was hallowed real estate that not even Podcasts could occupy.</p>
+						<p>We settled on the Home page, with an icon in the top corner next to others for Settings, Recently Listened, and Notifications. This would grant us fairly prominent placement and an easy point-of-access, while staying out-of-the-way enough for users who wouldn’t be interested in the feature.</p>
+					</div>
+					<div class="img-wrapper">
+						<img 
+							srcset="img/case-study-spotify/homeMidFi-640.jpg 640w,
+									img/case-study-spotify/homeMidFi-768.jpg 768w,
+									img/case-study-spotify/homeMidFi-1024.jpg 1024w,
+									img/case-study-spotify/homeMidFi-1336.jpg 1336w,
+									img/case-study-spotify/homeMidFi-1600.jpg 1600w,
+									img/case-study-spotify/homeMidFi-1920.jpg 1920w"
+							sizes="(max-width: 640px) 640px,
+									(max-width: 768px) 768px,
+									(max-width: 1024px) 1024px,
+									(max-width: 1336px) 1336px,
+									(max-width: 1600px) 1600px,
+									1920px"
+							src="img/case-study-spotify/homeMidFi-1920.jpg"
+							alt="Splash screen on the Spotify iPhone app which reads 'New feature for you!'"
+						>
+					</div>
+					<div class="text-wrapper">
+						<p>We also struggled with how many options to give the user and how to logically flow from one step to the next.</p>
+						<ul>
+							<li>How many alarms can the user set?</li>
+							<li>How automated could (and should) we make the alarm(s)?</li>
+							<li>Just which playlists do we allow the user to set as an alarm? Those within their Library? Specific alarms made by Spotify for waking up, or all of Spotify’s playlists? And how do we differentiate these options?</li>
+						</ul>
+						<p>We diverged in our thinking slightly here, so we created two different mid-fi prototypes with diverging user flows to test. When in doubt, fall back on research. So we each selected a few users and presented them with both options—with half seeing option A first and half option B in order to minimize bias.</p>
+					</div>
+				</section>
+				<!---- ITERATION ---->
+				<section id="iteration">
+					<div class="text-wrapper">
+						<h2>Feedback & refinement</h2>
+						<p>Our initial tests allowed us settle on one flow—with plenty of caveats. We decided to go back on some initial ideas based on feedback.</p>
+						<p>Initially we decided to focus on setting a single alarm to reduce complexity. This was a frustration for many of our testers though—they were used to setting multiple alarms with independent functions. And especially for an alarm within Spotify, they wanted to be able to set distinct alarms for different days with their own playlists.</p>
+						<p>We also added a step to the process: previewing a playlist before selecting it. In our initial flows, the user was given a list of playlists to select, and once they tapped the playlist, it was set. There was no way for the user to see what music was in the playlist they were choosing, which was a clear pain point.</p>
+					</div>
+					<div class="img-wrapper">
+						<img 
+							srcset="img/case-study-spotify/midFiFlow-640.jpg 640w,
+									img/case-study-spotify/midFiFlow-768.jpg 768w,
+									img/case-study-spotify/midFiFlow-1024.jpg 1024w,
+									img/case-study-spotify/midFiFlow-1336.jpg 1336w,
+									img/case-study-spotify/midFiFlow-1600.jpg 1600w,
+									img/case-study-spotify/midFiFlow-1920.jpg 1920w"
+							sizes="(max-width: 640px) 640px,
+									(max-width: 768px) 768px,
+									(max-width: 1024px) 1024px,
+									(max-width: 1336px) 1336px,
+									(max-width: 1600px) 1600px,
+									1920px"
+							src="img/case-study-spotify/midFiFlow-1920.jpg"
+							alt="Splash screen on the Spotify iPhone app which reads 'New feature for you!'"
+						>
+					</div>
+					<div class="text-wrapper">
+						<p>Additionally, we added a splash screen to the home screen that notified users of the new feature with a link to head straight to the start of the process, making sure the feature was obviously discoverable and explained (with an option to dismiss for those that didn’t want it).</p>
+						<p>We were left with the following user path:</p>
+						<ul>
+							<li>Splash screen from Home screen</li>
+							<li>New “Alarms” screen with CTA (call-to-action) to create a new alarm</li>
+							<li>Time and day options for alarm, and CTA to select a playlist</li>
+							<li>List of playlists: both “Made to wake up” playlists curated by Spotify that scroll horizontally, and playlists in the user’s Library listed below</li>
+							<li>A preview of the selected playlist with a CTA to use the playlist for the alarm</li>
+							<li>Back to the alarm options with the selected playlist and options for volume and a fade-in</li>
+							<li>After saving the playlist, a notification assuring the user that the alarm has been set</li>
+						</ul>
+						<p>We also added screens allowing the user to turn individual alarms on or off, and set a nightly “bedtime reminder” that would alert the user that they have an alarm set for the next morning.</p>
+						<p>Another round of quick usability tests validated our new flow—and from there, we were on to hi-fi.</p>
+					</div>
+				</section>
+				<!---- DELIVERY ---->
+				<section id="delivery">
+					<div class="text-wrapper">
+						<h2>Delivering the product—in high fidelity</h2>
+						<p>Utilizing a combination of user-created UI kits and lots of screenshots, we made assets that closely matched Spotify’s branding and UI guidelines. We translated the flow from our mid-fi designs into high-fidelity screens that should look like they belonged within the existing app.</p>
+						<p>This involved creating reusable components within Figma, such as buttons and list views, that matched Spotify’s existing assets. Aside from the typeface (Spotify’s Circular font is a little expensive, so we used a Google Fonts alternative that lined up pretty closely) we were able to very faithfully recreate Spotify’s UI.</p>
+					</div>
+					<div class="img-wrapper">
+						<iframe class="figma-embed" loading="lazy" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FEyGVbFOtDWTE3olwM4HuMR%2FAdd-a-feature%253A-Spotify%3Fpage-id%3D0%253A1%26node-id%3D3%253A560%26viewport%3D273%252C48%252C0.31%26scaling%3Dscale-down%26starting-point-node-id%3D3%253A560" allowfullscreen></iframe>
+					</div>
+					<div class="text-wrapper">
+						<p>As we finished up our user flow, we realized we were missing a key piece—what happens when the alarm goes off? We mocked up the alert notification and an in-app screen to snooze or dismiss the alarm.</p>
+						<p>So finally, we were left with two prototyped flows: setting and managing alarms, and waking up to the alarm when it goes off.</p>
+					</div>
+					<div class="img-wrapper">
+						<iframe class="figma-embed" loading="lazy" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FEyGVbFOtDWTE3olwM4HuMR%2FAdd-a-feature%253A-Spotify%3Fpage-id%3D0%253A1%26node-id%3D48%253A2827%26viewport%3D273%252C48%252C0.31%26scaling%3Dscale-down%26starting-point-node-id%3D48%253A2786" allowfullscreen></iframe>
+					</div>
+					<div class="text-wrapper">
+						<h2>Wrap-up</h2>
+						<p>So, we did it. We integrated a feature that users would find useful into a popular app with already-defined branding and UI patterns. It was a great exercise in focusing on the importance of existing mental models and the challenge of adding to them without breaking patterns or overloading the user.</p>
+					</div>
+				</section>
+			</article>
+			<!---------- READ MORE ---------->
+			<div class="read-more-links">
+				<div class="read-prev">
+					<a href="case-study-meditation.html">
+						<h5>← Newer</h5>
+						<p>Case study: meditation app for NWI</p>
+					</a>
+				</div>
+				<div class="read-next">
+					<a href="case-study-escape-room.html">
+						<h5>Older →</h5>
+						<p>Case study: escape room redesign</p>
+					</a>
+				</div>
+			</div>
+		</main>
+		<!---------- MOBILE FOOTER ---------->
+		<div id="mobileFooter">
+			<p>&copy; 2021 Michael Klepacki. All rights reserved.<br>Built from scratch with love, sweat, & tears.</p>
+		</div>
+	</body>
+</html>

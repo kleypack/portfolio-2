@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Case study: meditation app for NWI — Michael Klepacki</title>
+		<meta name="description" content="Delivering an MVP with a fresh new style that serves both coach and client.">
+		<meta property="og:title" content="Case study: meditation app for NWI — Michael Klepacki">
+		<meta property="og:description" content="Delivering an MVP with a fresh new style that serves both coach and client.">
+		<meta property="og:image" content="img/case-study-meditation/thumbnail.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- FAVICONS -->
+		<link rel="shortcut icon" type="image/png" href="img/favicon/favicon-32.png" sizes="32x32">
+		<link rel="shortcut icon" type="image/png" href="img/favicon/favicon-128.png" sizes="128x128">
+		<link rel="shortcut icon" type="image/png" href="img/favicon/favicon-152.png" sizes="152x152">
+		<link rel="shortcut icon" type="image/png" href="img/favicon/favicon-167.png" sizes="167x167">
+		<link rel="shortcut icon" type="image/png" href="img/favicon/favicon-180.png" sizes="180x180">
+		<link rel="shortcut icon" type="image/png" href="img/favicon/favicon-192.png" sizes="192x192">
+		<link rel="shortcut icon" type="image/png" href="img/favicon/favicon-196.png" sizes="196x196">
+		<!-- STYLE SHEETS -->
+		<link rel="stylesheet" href="css/main.css">
+    	<link rel="stylesheet" href="css/responsive.css">
+    	<!-- SCRIPTS -->
+    	<script async src="js/mobile-nav.js"></script>
+		<script async src="js/progress-bar.js"></script>
+    	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script defer src="js/anchor-smooth-scroll.js"></script>
+		<!-- CLOUDFLARE WEB ANALYTICS -->
+		<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "05b4999771034daf902d2a8f682c6b5d"}'></script>
+	</head>
+	<body>
+		<!---------- HEADER ---------->
+		<header>
+			<div id="logo">
+				<a href="index.html">
+					<svg width="auto" height="auto" viewBox="0 0 186 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M105.038 27H107.792L111.446 16.29L111.284 27H113.696L113.714 14.022H109.808L106.442 24.39L103.166 14.022H99.26V27H101.654L101.51 16.254L105.038 27Z" fill="#414347"/><path d="M117.05 27H119.498V14.022H117.05V27Z" fill="#414347"/><path d="M127.875 27.252C131.151 27.252 132.897 25.956 132.951 22.248H130.539C130.431 24.426 129.459 25.092 127.857 25.092C125.697 25.092 124.851 23.868 124.851 20.52C124.851 17.19 125.715 15.93 127.893 15.93C129.513 15.93 130.467 16.65 130.557 18.864H132.969C132.933 15.138 131.205 13.77 127.893 13.77C123.951 13.77 122.349 15.84 122.349 20.52C122.349 25.182 123.915 27.252 127.875 27.252Z" fill="#414347"/><path d="M143.443 27H145.891V14.022H143.443V19.242H138.187V14.022H135.739V27H138.187V21.474H143.443V27Z" fill="#414347"/><path d="M148.071 27H150.681L151.455 24.552H156.873L157.665 27H160.275L155.631 14.022H152.697L148.071 27ZM152.175 22.302L154.137 16.2L156.135 22.302H152.175Z" fill="#414347"/><path d="M162.443 27H171.083V24.768H164.891V21.564H170.075V19.314H164.891V16.254H170.975V14.022H162.443V27Z" fill="#414347"/><path d="M174.004 27H181.78V24.75H176.452V14.022H174.004V27Z" fill="#414347"/><path d="M99.26 47H101.708V44.264L104.012 41.348L107.072 47H109.844L105.524 39.404L109.772 34.022H106.856L101.708 41.006V34.022H99.26V47Z" fill="#414347"/><path d="M112.023 47H119.799V44.75H114.471V34.022H112.023V47Z" fill="#414347"/><path d="M122.044 47H130.684V44.768H124.492V41.564H129.676V39.314H124.492V36.254H130.576V34.022H122.044V47Z" fill="#414347"/><path d="M133.155 47H135.603V42.95H137.853C141.993 42.95 143.325 42.032 143.325 38.468C143.325 34.922 141.993 34.022 137.853 34.022H133.155V47ZM135.603 40.7V36.254H138.195C139.977 36.254 140.805 36.434 140.805 38.45C140.805 40.484 140.031 40.7 138.195 40.7H135.603Z" fill="#414347"/><path d="M143.381 47H145.991L146.765 44.552H152.183L152.975 47H155.585L150.941 34.022H148.007L143.381 47ZM147.485 42.302L149.447 36.2L151.445 42.302H147.485Z" fill="#414347"/><path d="M162.354 47.252C165.63 47.252 167.376 45.956 167.43 42.248H165.018C164.91 44.426 163.938 45.092 162.336 45.092C160.176 45.092 159.33 43.868 159.33 40.52C159.33 37.19 160.194 35.93 162.372 35.93C163.992 35.93 164.946 36.65 165.036 38.864H167.448C167.412 35.138 165.684 33.77 162.372 33.77C158.43 33.77 156.828 35.84 156.828 40.52C156.828 45.182 158.394 47.252 162.354 47.252Z" fill="#414347"/><path d="M170.217 47H172.665V44.264L174.969 41.348L178.029 47H180.801L176.481 39.404L180.729 34.022H177.813L172.665 41.006V34.022H170.217V47Z" fill="#414347"/><path d="M182.98 47H185.428V34.022H182.98V47Z" fill="#414347"/><path fill-rule="evenodd" clip-rule="evenodd" d="M0 3V51C1.64929e-05 55.9705 4.02945 60 9 60L81 60C81 60 81 60 81 60C85.9706 60 90.0001 55.9705 90.0001 51C90.0001 50.9863 90.0001 50.9726 90 50.9589V3C90 1.34315 88.6569 0 87 0C86.4243 0 85.8864 0.16218 85.4296 0.443346L39.1827 27.9025L4.88679 0.667487C4.3714 0.250061 3.7149 0 3 0C1.34315 0 0 1.34315 0 3ZM62.3981 54L6 9.21326V51C6.00002 52.6568 7.34316 54 9 54L62.3981 54ZM84.0001 51L84 8.27011L44.2105 31.8951L72.0463 54L81.0001 54C82.6569 54 84.0001 52.6568 84.0001 51Z" fill="#414347"/></svg>
+				</a>
+			</div>
+			<!----- NAVIGATION ----->
+			<nav id="topNav">
+				<div id="mainNav">
+					<a href="index.html">← Work</a>
+					<a href="play.html">Play</a>
+					<a href="about.html">About</a>
+					<a href="contact.html">Contact</a>
+				</div>
+				<div id="secondaryNav">
+					<p class="secondary-nav-container">
+						On this page
+					</p>
+					<div class="secondary-nav-items">
+						<a href="#brief" class="folder-page">Brief</a>
+						<a href="#research" class="folder-page">Research</a>
+						<a href="#ideation" class="folder-page">Ideation</a>
+						<a href="#iteration" class="folder-page">Iteration</a>
+						<a href="#delivery" class="folder-page">Delivery</a>
+						<a href="#retro" class="folder-page">Retrospective</a>
+					</div>
+				</div>
+			</nav>
+			<!----- MOBILE NAV MENU ----->
+  			<a href="javascript:void(0);" id="navIcon" onclick="toggleMobileNav()">Menu</a>
+		    <!----- DESKTOP FOOTER ----->
+		    <div id="footer">
+    			<p>&copy; 2022 Michael Klepacki.<br>Built from scratch with love, sweat, & tears.</p>
+    		</div>
+		</header>
+		<!---------- PROGRESS BAR ---------->
+		<div id="progressBar"></div>
+		<!---------- PAGE ---------->
+		<main id="pageWrapper">
+			<article>
+				<!---- BRIEF ---->
+				<section id="brief">
+					<div class="text-wrapper">
+						<h1>Case study: a meditation app for the National Wellness Institute</h1>
+						<p class="lede">Create a set of digital wellness tools for National Wellness Institute coaches, and update NWI’s image to reflect their innovative and fresh new approach.</p>
+						<div class="row">
+							<div class="column">
+								<h4>Time</h4>
+								<p>5 days</p>
+							</div>
+							<div class="column">
+								<h4>Role</h4>
+								<p>UX/UI Designer</p>
+							</div>
+						</div>
+					</div>
+					<div class="img-wrapper">
+						<img 
+							srcset="img/case-study-meditation/overview-640.png 640w,
+									img/case-study-meditation/overview-768.png 768w,
+									img/case-study-meditation/overview-1024.png 1024w,
+									img/case-study-meditation/overview-1336.png 1336w,
+									img/case-study-meditation/overview-1600.png 1600w,
+									img/case-study-meditation/overview.png 1920w"
+							sizes="(max-width: 640px) 640px,
+									(max-width: 768px) 768px,
+									(max-width: 1024px) 1024px,
+									(max-width: 1336px) 1336px,
+									(max-width: 1600px) 1600px,
+									1920px"
+							src="img/case-study-meditation/overview.png"
+							alt="An overview of app screens from the NWI Meditation app."
+						>
+					</div>
+					<div class="text-wrapper">
+						<p>As part of my training for <a target="blank" href="https://www.ironhack.com/en/ux-ui-design/paris">Ironhack</a>, I was tasked with building a minimum viable product (MVP) for a “client,” the National Wellness Institute. NWI offers certification and training for wellness professionals, as well as tools and frameworks they can use to help their clients achieve wellness goals. The institute has numerous years of experience but has been slow to catch up with quickly evolving technology.</p>
+						<p>I’d be creating a prototype for a new app that would allow coaches to connect with their clients, focusing on one specific aspect of wellness. The prototype needed to consist of:</p>
+						<ul>
+							<li>the <strong>user flow for the main feature</strong> of the app,</li>
+							<li>a way for users to set up a <strong>profile</strong> with information relevant to their goals,</li>
+							<li>a way for users to set goals and <strong>track their progress</strong>,</li>
+							<li>the ability for users to <strong>share stats</strong> with their coaches (or vice versa).</li>
+						</ul>
+						<p>The app should be native to one platform, iOS or Android. I was also expected to provide at least one screen for any responsive device to demonstrate the ability for the app to further adapt to user desires and needs. I did not need to follow any existing NWI visual guidelines, but should instead create a new style guide for the app.</p>
+						<h3>Narrowing the target</h3>
+						<p>I noticed that NWI is largely focused on wellness <em>professionals</em>. The brief, though, included both these coaches and their clients.</p>
+					</div>
+					<div class="img-wrapper">
+						<img 
+							srcset="img/case-study-meditation/targetUser-640.png 640w,
+									img/case-study-meditation/targetUser-768.png 768w,
+									img/case-study-meditation/targetUser-1024.png 1024w,
+									img/case-study-meditation/targetUser-1336.png 1336w,
+									img/case-study-meditation/targetUser-1600.png 1600w,
+									img/case-study-meditation/targetUser.png 1920w"
+							sizes="(max-width: 640px) 640px,
+									(max-width: 768px) 768px,
+									(max-width: 1024px) 1024px,
+									(max-width: 1336px) 1336px,
+									(max-width: 1600px) 1600px,
+									1920px"
+							src="img/case-study-meditation/targetUser.png"
+							alt="Two linked circles labeled 'Coaches' and 'Users,' with 'Coaches' highlighted."
+						>
+					</div>
+					<div class="text-wrapper">
+						<p>With my timeline of only 5 days, it would be nigh impossible to build a solution that met the needs of both groups. So for my initial scope within this first sprint, the clients—users of the app—would be my primary target. Building out the companion solution tailored to the coaches would be top of my list of next steps.</p>
+					</div>
+				</section>
+				<!---- RESEARCH ---->
+                <section id="research">
+					<div class="text-wrapper">
+					<h2>Research</h2>
+					<p>I chose meditation and stress relief as the wellness aspect I’d focus on. Research showed that since 2012, the number of people practicing meditation globally has tripled, with meditation now roughly as popular as yoga in the US. It’s a fast-growing industry and practice, and, especially after the events of 2020, stress relief is at the top of many people’s minds.</p>
+					<p>Subject-matter research gave me some insights into the practice of meditation itself:</p>
+					<ul class="key-points">
+						<li>Meditation is most effective when practiced regularly, with daily practice the #1 way to turn it into a habit.</li>
+						<li>Even one minute of meditation a day has been proven to be effective.</li>
+						<li>When trying to form a new habit, we must fight autopilot—dismissed reminders must be refreshed regularly, or the habit instead becomes to ignore them.</li>
+					</ul>
+					<p>To get a better sense of the app’s potential user base, I asked questions both with an online survey and six in-depth interviews of people practicing or interested in meditation.</p>
+					<ul class="key-quotes">
+						<li><span class="big-quote">“</span>I truly believe in the positive effects of meditation, because I’ve felt them.</li>
+						<li><span class="big-quote">“</span>It’s so hard to turn into a habit, especially when I’m stressed—which sucks, because that’s when I need it the most.</li>
+						<li><span class="big-quote">“</span>It can be difficult to know if I’m meditating the <em>right</em> way.</li>
+					</ul>
+					<p>With these responses combined with my subject-matter research, I was able to craft a problem statement that would guide my design decisions.</p>
+					</div>
+					<div class="img-wrapper">
+						<img 
+							srcset="img/case-study-meditation/problemStatement-640.png 640w,
+									img/case-study-meditation/problemStatement-768.png 768w,
+									img/case-study-meditation/problemStatement-1024.png 1024w,
+									img/case-study-meditation/problemStatement-1336.png 1336w,
+									img/case-study-meditation/problemStatement-1600.png 1600w,
+									img/case-study-meditation/problemStatement.png 1920w"
+							sizes="(max-width: 640px) 640px,
+									(max-width: 768px) 768px,
+									(max-width: 1024px) 1024px,
+									(max-width: 1336px) 1336px,
+									(max-width: 1600px) 1600px,
+									1920px"
+							src="img/case-study-meditation/problemStatement.png"
+							alt="People struggling to manage their stress need a way to find a guided meditation routine that encourages long-term engagement because their stress is compounded when they can’t keep up their meditation habits."
+						>
+					</div>	
+				</section>
+				<!---- IDEATION ---->
+				<section id="ideation">
+					<div class="text-wrapper">
+						<h2>Ideation</h2>
+						<p>Brainstorming sessions led to me to focus on personalization, gamification, and notifications. After sketching some initial ideas, I realized I needed to drill down even further into the coach–client relationship.</p>
+					</div>
+					<div class="img-wrapper">
+						<img 
+							srcset="img/case-study-meditation/lowFi-640.jpg 640w,
+									img/case-study-meditation/lowFi-768.jpg 768w,
+									img/case-study-meditation/lowFi-1024.jpg 1024w,
+									img/case-study-meditation/lowFi-1336.jpg 1336w,
+									img/case-study-meditation/lowFi-1600.jpg 1600w,
+									img/case-study-meditation/lowFi.jpg 1920w"
+							sizes="(max-width: 640px) 640px,
+									(max-width: 768px) 768px,
+									(max-width: 1024px) 1024px,
+									(max-width: 1336px) 1336px,
+									(max-width: 1600px) 1600px,
+									1920px"
+							src="img/case-study-meditation/lowFi.jpg"
+							alt="Initial low-fidelity sketches from my brainstorming process."
+						>
+					</div>
+					<div class="text-wrapper">
+						<p>I used my next round of low-fi sketches to run some concept tests. Testers were excited about the idea, so I decided to move forward with it.</p>
+						<ul class="key-points">
+							<li>Live fitness classes with a personal trainer, but for meditation.</li>
+						</ul>
+						<p>Classes with actual trainers are extremely popular and successful in the fitness space—accountability keeps trainees motivated, and guidance helps them feel more comfortable. Applying this model to meditation can address issues with motivation and uncertainty found in research.</p>
+						<p>In addition to live training, users could start “quick sessions” any time—pre-recorded 1- or 5-minute guided meditation sessions. Removing as much friction as possible is key to helping form new habits.</p> 
+						<p>With my concept validated, I crafted a mid-fidelity user flow for the onboarding process and the main screens of the app.</p>
+					</div>
+					<div class="img-wrapper">
+						<img 
+							srcset="img/case-study-meditation/midFiWelcome-640.png 640w,
+									img/case-study-meditation/midFiWelcome-768.png 768w,
+									img/case-study-meditation/midFiWelcome-1024.png 1024w,
+									img/case-study-meditation/midFiWelcome-1336.png 1336w,
+									img/case-study-meditation/midFiWelcome-1600.png 1600w,
+									img/case-study-meditation/midFiWelcome.png 1920w"
+							sizes="(max-width: 640px) 640px,
+									(max-width: 768px) 768px,
+									(max-width: 1024px) 1024px,
+									(max-width: 1336px) 1336px,
+									(max-width: 1600px) 1600px,
+									1920px"
+							src="img/case-study-meditation/midFiWelcome.png"
+							alt="First three screens from the mid-fidelity prototype of the onboarding process, giving an overview of the app’s mission."
+						>
+					</div>
+				</section>
+				<!---- ITERATION ---->
+				<section id="iteration">
+					<div class="text-wrapper">
+						<h2>Iteration</h2>
+						<p>After running usability tests on the mid-fi prototype, I adopted some key iterations. My initial flow asked the user to pick a payment plan and create an account before being able to view coaches and select one. Testers were hesitant to continue onboarding at this point, feeling they were being asked too much before seeing the real value of the app.</p>
+					</div>
+					<div class="img-wrapper">
+						<img 
+							srcset="img/case-study-meditation/iterationsPlan-640.png 640w,
+									img/case-study-meditation/iterationsPlan-768.png 768w,
+									img/case-study-meditation/iterationsPlan-1024.png 1024w,
+									img/case-study-meditation/iterationsPlan-1336.png 1336w,
+									img/case-study-meditation/iterationsPlan-1600.png 1600w,
+									img/case-study-meditation/iterationsPlan.png 1920w"
+							sizes="(max-width: 640px) 640px,
+									(max-width: 768px) 768px,
+									(max-width: 1024px) 1024px,
+									(max-width: 1336px) 1336px,
+									(max-width: 1600px) 1600px,
+									1920px"
+							src="img/case-study-meditation/iterationsPlan.png"
+							alt="The 'Choose a plan,' 'Create your account,' and 'Choose your coach' pages. The 'Choose your coach' page is shown to be moved before the other screens. A 'Choose later' button is being added to the 'Choose a plan' page."
+						>
+					</div>
+					<div class="text-wrapper">
+						<p>So I made plan selection and account creation the very last steps of the onboarding process, after they were able to select a coach that worked for them. I also added the option to defer selecting a plan and begin a trial without commitment, which increased testers’ confidence in the app’s utility.</p>
+						<p>I also vastly simplified the session scheduler page after testers struggled to use it. A bit of information density was sacrificed to make the info more understandable and consistent with existing UI patterns.</p>
+					</div>
+					<div class="img-wrapper">
+						<img 
+							srcset="img/case-study-meditation/iterationsPickSession-640.png 640w,
+									img/case-study-meditation/iterationsPickSession-768.png 768w,
+									img/case-study-meditation/iterationsPickSession-1024.png 1024w,
+									img/case-study-meditation/iterationsPickSession-1336.png 1336w,
+									img/case-study-meditation/iterationsPickSession-1600.png 1600w,
+									img/case-study-meditation/iterationsPickSession.png 1920w"
+							sizes="(max-width: 640px) 640px,
+									(max-width: 768px) 768px,
+									(max-width: 1024px) 1024px,
+									(max-width: 1336px) 1336px,
+									(max-width: 1600px) 1600px,
+									1920px"
+							src="img/case-study-meditation/iterationsPickSession.png"
+							alt="Before and after shots of the 'Pick a session' page."
+						>
+					</div>
+					<div class="text-wrapper">
+						<p>With these changes, along with a few others and alignment fixes, I was ready to move on to the high-fidelity prototype that would be my final deliverable. But first, to get there, I would need to define the visual style of the app.</p>
+					</div>
+				</section>
+				<!---- DELIVERY ---->
+				<section id="delivery">
+					<div class="text-wrapper">
+						<h2>Delivery & post-sprint evolution</h2>
+						<p>Insight from my research led me to pursue a style that was:</p>
+						<ul>
+							<li>clean,</li>
+							<li>soft,</li>
+							<li>and inspiring.</li>
+						</ul>
+						<p>After much exploration, I chose 3 different styles that I used to mock up a few screens for desirability tests. The first option was the most well-received, but the reception was pretty mixed. However, at this point I was nearing the end of my super tight timeline. I decided to move forward for the sake of meeting the deadline, with a plan to explore the style further post-sprint.</p>
+					</div>
+					<div class="img-wrapper">
+						<img 
+							srcset="img/case-study-meditation/hiFiOptions-640.png 640w,
+									img/case-study-meditation/hiFiOptions-768.png 768w,
+									img/case-study-meditation/hiFiOptions-1024.png 1024w,
+									img/case-study-meditation/hiFiOptions-1336.png 1336w,
+									img/case-study-meditation/hiFiOptions-1600.png 1600w,
+									img/case-study-meditation/hiFiOptions.png 1920w"
+							sizes="(max-width: 640px) 640px,
+									(max-width: 768px) 768px,
+									(max-width: 1024px) 1024px,
+									(max-width: 1336px) 1336px,
+									(max-width: 1600px) 1600px,
+									1920px"
+							src="img/case-study-meditation/hiFiOptions.png"
+							alt="Three screens from the app, each with different visual styles applied. The first style, with soft peach and green colors, has been selected."
+						>
+					</div>
+					<div class="text-wrapper">
+						<p>I delivered a <a target="blank" href="https://www.figma.com/proto/l2oCQsuk9eNO39Vdbc0cyJ/P4-Wellness-%E2%80%93-Master-Figma?node-id=112%3A4378&viewport=241%2C48%2C0.07&scaling=scale-down&starting-point-node-id=112%3A4379&show-proto-sidebar=1" >hi-fi prototype</a> that included:</p>
+						<ul>
+							<li>the onboarding flow,</li>
+							<li>the main home page,</li>
+							<li>session scheduling pages,</li>
+							<li>the flow for launching and completing Quick Sessions,</li>
+							<li>a Chat screen for messaging a user’s coach,</li>
+							<li>and a Stats page to track progress.</li>
+						</ul>
+						<p>Per the brief, I also delivered a screen for a secondary device. I chose the Apple Watch, which is a perfect fit for a meditation app. Users can pair the Watch with bluetooth headphones to quickly jump into a meditation session without even pulling a phone out of their pocket (and potentially risk becoming distracted by other apps). I would explore the Watch app further after the initial deadline.</p>
+						<h3>Post-sprint refinements</h3>
+						<p>Post-sprint explorations led me to a style with a simplified, ultra-clean palette accented with bright splashes of color where it mattered most—where users could jump into meditation.</p>
+					</div>
+					<div class="img-wrapper">
+						<img 
+							srcset="img/case-study-meditation/hiFiPostSprint-640.png 640w,
+									img/case-study-meditation/hiFiPostSprint-768.png 768w,
+									img/case-study-meditation/hiFiPostSprint-1024.png 1024w,
+									img/case-study-meditation/hiFiPostSprint-1336.png 1336w,
+									img/case-study-meditation/hiFiPostSprint-1600.png 1600w,
+									img/case-study-meditation/hiFiPostSprint.png 1920w"
+							sizes="(max-width: 640px) 640px,
+									(max-width: 768px) 768px,
+									(max-width: 1024px) 1024px,
+									(max-width: 1336px) 1336px,
+									(max-width: 1600px) 1600px,
+									1920px"
+							src="img/case-study-meditation/hiFiPostSprint.png"
+							alt="Various screens from the app: an introduction to the onboarding process; the 'Choose your coach' page; the main home screen; the 'Your stats' page; and the messaging page where users can chat with their coach."
+						>
+					</div>
+					<div class="text-wrapper">
+						<p>Color use is intentional, with each offered meditation style represented by a different hue. Overall styling is kept minimal with a very low visual weight, so as not to distract from the quiet, sensitive nature of meditation. The primary focus of the app should always be to stay out of the way while encouraging positivity and introspection.</p>
+					</div>
+					<div class="img-wrapper">
+						<img 
+							srcset="img/case-study-meditation/hiFiPlayScreens-640.png 640w,
+									img/case-study-meditation/hiFiPlayScreens-768.png 768w,
+									img/case-study-meditation/hiFiPlayScreens-1024.png 1024w,
+									img/case-study-meditation/hiFiPlayScreens-1336.png 1336w,
+									img/case-study-meditation/hiFiPlayScreens-1600.png 1600w,
+									img/case-study-meditation/hiFiPlayScreens.png 1920w"
+							sizes="(max-width: 640px) 640px,
+									(max-width: 768px) 768px,
+									(max-width: 1024px) 1024px,
+									(max-width: 1336px) 1336px,
+									(max-width: 1600px) 1600px,
+									1920px"
+							src="img/case-study-meditation/hiFiPlayScreens.png"
+							alt="The home screen of the app surrounded on both sides by the different Now Playing screens, each a different color depending on type of meditation: green for stress relief; orange for body scan; blue for sleep aid; and yellow for focus."
+						>
+					</div>
+					<div class="text-wrapper">
+						<p>This new style was well-received amongst five desirability and usability tests. I made an updated hi-fi prototype with a key addition: live session notifications and play screens, which had been missing from the initial deliverable.</p>
+					</div>
+					<div class="img-wrapper">
+						<img 
+							srcset="img/case-study-meditation/pushNotification-640.png 640w,
+									img/case-study-meditation/pushNotification-768.png 768w,
+									img/case-study-meditation/pushNotification-1024.png 1024w,
+									img/case-study-meditation/pushNotification-1336.png 1336w,
+									img/case-study-meditation/pushNotification-1600.png 1600w,
+									img/case-study-meditation/pushNotification.png 1920w"
+							sizes="(max-width: 640px) 640px,
+									(max-width: 768px) 768px,
+									(max-width: 1024px) 1024px,
+									(max-width: 1336px) 1336px,
+									(max-width: 1600px) 1600px,
+									1920px"
+							src="img/case-study-meditation/pushNotification.png"
+							alt="An iPhone home screen with a push notification from the NWI Meditate app that reads 'Your live session is about to start. Ready to join?'"
+						>
+					</div>
+					<div class="text-wrapper">
+						<p>This left me with a pretty full-featured, hi-fidelity prototype consisting of:</p>
+						<ul>
+							<li>onboarding,</li>
+							<li>quick sessions,</li>
+							<li>live sessions,</li>
+							<li>messaging with coach,</li>
+							<li>stats and progress tracking.</li>
+						</ul>
+						<p>You can try out the full prototype, with all user flows, below. (I love <a href="contact.html">feedback</a>!)</p>
+					</div>
+					<div class="img-wrapper">
+						<iframe class="figma-embed" loading="lazy" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fl2oCQsuk9eNO39Vdbc0cyJ%2FNWI-Wellness-App%3Fpage-id%3D160%253A6976%26node-id%3D161%253A10000%26viewport%3D241%252C48%252C0.18%26scaling%3Dscale-down%26starting-point-node-id%3D161%253A9984%26show-proto-sidebar%3D1" allowfullscreen></iframe>
+					</div>
+					<div class="text-wrapper">
+						<h3>Secondary device</h3>
+						<p>As promised, I also furthered my work on the Apple Watch app. I updated my initial screen to match the new visual style, but also built out the full user flow of what I envision as its primary purpose—Quick Sessions.</p>
+					</div>
+					<div class="img-wrapper">
+						<img 
+							srcset="img/case-study-meditation/appleWatch-640.png 640w,
+									img/case-study-meditation/appleWatch-768.png 768w,
+									img/case-study-meditation/appleWatch-1024.png 1024w,
+									img/case-study-meditation/appleWatch-1336.png 1336w,
+									img/case-study-meditation/appleWatch-1600.png 1600w,
+									img/case-study-meditation/appleWatch.png 1920w"
+							sizes="(max-width: 640px) 640px,
+									(max-width: 768px) 768px,
+									(max-width: 1024px) 1024px,
+									(max-width: 1336px) 1336px,
+									(max-width: 1600px) 1600px,
+									1920px"
+							src="img/case-study-meditation/appleWatch.png"
+							alt="An overview of the Apple Watch app screens, displaying the Quick Session user flow."
+						>
+					</div>
+					<div class="text-wrapper">
+						<p>The Watch app is fully prototyped <a href="https://www.figma.com/proto/l2oCQsuk9eNO39Vdbc0cyJ/NWI-Wellness-App?node-id=253%3A21380&viewport=241%2C48%2C0.26&scaling=scale-down&starting-point-node-id=272%3A13990">here</a>.</p>
+					</div>
+				</section>
+				<!---- RETROSPECTIVE ---->
+				<section id="retro">
+					<div class="text-wrapper">
+						<h2>Next steps & retrospective</h2>
+						<p>As mentioned at the top, my next steps would begin with building out a companion platform for coaches to upload and manage their lessons and schedules, and to live-record sessions.</p>
+						<p>Additionally, I need to build out a Settings panel for the client-facing app, giving them the option to modify their plan, switch coaches, and manage their account.</p>
+						<p>And finally, I’d hope to build out a system of rich notifications. I envision this as allowing the user to schedule reminders to log Quick Sessions—but these would be smart and adaptive to user progress and activity.</p>
+						<p>This project was a challenging introduction to the sheer amount of work involved in delivering an MVP. It was also an excellent challenge as far as time-management with such a tight deadline. Mental health and stress management are subjects that are extremely important to me, though, and I really enjoyed the work and would love to push the project even further.</p>
+					</div>
+				</section>		
+            </article>
+			<!---------- READ MORE ---------->
+			<div class="read-more-links">
+				<div class="read-prev">
+					<a href="good-humans-onboarding.html">
+						<h5>← Newer</h5>
+						<p>Creating an onboarding flow for Good Humans</p>
+					</a>
+				</div>
+				<div class="read-next">
+					<a href="case-study-spotify.html">
+						<h5>Older →</h5>
+						<p>Case study: adding a feature to Spotify</p>
+					</a>
+				</div>
+			</div>
+        </main>
+		<!---------- MOBILE FOOTER ---------->
+		<div id="mobileFooter">
+			<p>&copy; 2021 Michael Klepacki. All rights reserved.<br>Built from scratch with love, sweat, & tears.</p>
+		</div>
+	</body>
+</html>

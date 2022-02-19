@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Onboarding flow for Good Humans — Michael Klepacki</title>
+		<meta name="description" content="Delivering the first piece of an MVP for a brand-new startup's app.">
+		<meta property="og:title" content="Onboarding flow for Good Humans — Michael Klepacki">
+		<meta property="og:description" content="Delivering the first piece of an MVP for a brand-new startup.">
+		<meta property="og:image" content="img/good-humans-onboarding/thumbnail.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- FAVICONS -->
+		<link rel="shortcut icon" type="image/png" href="img/favicon/favicon-32.png" sizes="32x32">
+		<link rel="shortcut icon" type="image/png" href="img/favicon/favicon-128.png" sizes="128x128">
+		<link rel="shortcut icon" type="image/png" href="img/favicon/favicon-152.png" sizes="152x152">
+		<link rel="shortcut icon" type="image/png" href="img/favicon/favicon-167.png" sizes="167x167">
+		<link rel="shortcut icon" type="image/png" href="img/favicon/favicon-180.png" sizes="180x180">
+		<link rel="shortcut icon" type="image/png" href="img/favicon/favicon-192.png" sizes="192x192">
+		<link rel="shortcut icon" type="image/png" href="img/favicon/favicon-196.png" sizes="196x196">
+		<!-- STYLE SHEETS -->
+		<link rel="stylesheet" href="css/main.css">
+    	<link rel="stylesheet" href="css/responsive.css">
+    	<!-- SCRIPTS -->
+    	<script async src="js/mobile-nav.js"></script>
+		<!-- <script async src="js/progress-bar.js"></script> -->
+		<script async src="js/img-animate-in.js"></script>
+    	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script defer src="js/anchor-smooth-scroll.js"></script>
+		<!-- CLOUDFLARE WEB ANALYTICS -->
+		<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "05b4999771034daf902d2a8f682c6b5d"}'></script>
+	</head>
+	<body>
+		<!---------- HEADER ---------->
+		<header>
+			<div id="logo">
+				<a href="index.html">
+					<svg width="auto" height="auto" viewBox="0 0 186 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M105.038 27H107.792L111.446 16.29L111.284 27H113.696L113.714 14.022H109.808L106.442 24.39L103.166 14.022H99.26V27H101.654L101.51 16.254L105.038 27Z" fill="#414347"/><path d="M117.05 27H119.498V14.022H117.05V27Z" fill="#414347"/><path d="M127.875 27.252C131.151 27.252 132.897 25.956 132.951 22.248H130.539C130.431 24.426 129.459 25.092 127.857 25.092C125.697 25.092 124.851 23.868 124.851 20.52C124.851 17.19 125.715 15.93 127.893 15.93C129.513 15.93 130.467 16.65 130.557 18.864H132.969C132.933 15.138 131.205 13.77 127.893 13.77C123.951 13.77 122.349 15.84 122.349 20.52C122.349 25.182 123.915 27.252 127.875 27.252Z" fill="#414347"/><path d="M143.443 27H145.891V14.022H143.443V19.242H138.187V14.022H135.739V27H138.187V21.474H143.443V27Z" fill="#414347"/><path d="M148.071 27H150.681L151.455 24.552H156.873L157.665 27H160.275L155.631 14.022H152.697L148.071 27ZM152.175 22.302L154.137 16.2L156.135 22.302H152.175Z" fill="#414347"/><path d="M162.443 27H171.083V24.768H164.891V21.564H170.075V19.314H164.891V16.254H170.975V14.022H162.443V27Z" fill="#414347"/><path d="M174.004 27H181.78V24.75H176.452V14.022H174.004V27Z" fill="#414347"/><path d="M99.26 47H101.708V44.264L104.012 41.348L107.072 47H109.844L105.524 39.404L109.772 34.022H106.856L101.708 41.006V34.022H99.26V47Z" fill="#414347"/><path d="M112.023 47H119.799V44.75H114.471V34.022H112.023V47Z" fill="#414347"/><path d="M122.044 47H130.684V44.768H124.492V41.564H129.676V39.314H124.492V36.254H130.576V34.022H122.044V47Z" fill="#414347"/><path d="M133.155 47H135.603V42.95H137.853C141.993 42.95 143.325 42.032 143.325 38.468C143.325 34.922 141.993 34.022 137.853 34.022H133.155V47ZM135.603 40.7V36.254H138.195C139.977 36.254 140.805 36.434 140.805 38.45C140.805 40.484 140.031 40.7 138.195 40.7H135.603Z" fill="#414347"/><path d="M143.381 47H145.991L146.765 44.552H152.183L152.975 47H155.585L150.941 34.022H148.007L143.381 47ZM147.485 42.302L149.447 36.2L151.445 42.302H147.485Z" fill="#414347"/><path d="M162.354 47.252C165.63 47.252 167.376 45.956 167.43 42.248H165.018C164.91 44.426 163.938 45.092 162.336 45.092C160.176 45.092 159.33 43.868 159.33 40.52C159.33 37.19 160.194 35.93 162.372 35.93C163.992 35.93 164.946 36.65 165.036 38.864H167.448C167.412 35.138 165.684 33.77 162.372 33.77C158.43 33.77 156.828 35.84 156.828 40.52C156.828 45.182 158.394 47.252 162.354 47.252Z" fill="#414347"/><path d="M170.217 47H172.665V44.264L174.969 41.348L178.029 47H180.801L176.481 39.404L180.729 34.022H177.813L172.665 41.006V34.022H170.217V47Z" fill="#414347"/><path d="M182.98 47H185.428V34.022H182.98V47Z" fill="#414347"/><path fill-rule="evenodd" clip-rule="evenodd" d="M0 3V51C1.64929e-05 55.9705 4.02945 60 9 60L81 60C81 60 81 60 81 60C85.9706 60 90.0001 55.9705 90.0001 51C90.0001 50.9863 90.0001 50.9726 90 50.9589V3C90 1.34315 88.6569 0 87 0C86.4243 0 85.8864 0.16218 85.4296 0.443346L39.1827 27.9025L4.88679 0.667487C4.3714 0.250061 3.7149 0 3 0C1.34315 0 0 1.34315 0 3ZM62.3981 54L6 9.21326V51C6.00002 52.6568 7.34316 54 9 54L62.3981 54ZM84.0001 51L84 8.27011L44.2105 31.8951L72.0463 54L81.0001 54C82.6569 54 84.0001 52.6568 84.0001 51Z" fill="#414347"/></svg>
+				</a>
+			</div>
+			<!----- NAVIGATION ----->
+			<nav id="topNav">
+				<div id="mainNav">
+					<a href="index.html">← Work</a>
+					<a href="play.html">Play</a>
+					<a href="about.html">About</a>
+					<a href="contact.html">Contact</a>
+				</div>
+				<div id="secondaryNav">
+					<p class="secondary-nav-container">
+						On this page
+					</p>
+					<div class="secondary-nav-items">
+						<a href="#brief" class="folder-page">Brief</a>
+						<a href="#research" class="folder-page">Research</a>
+						<a href="#ideation" class="folder-page">Ideation</a>
+						<a href="#iteration" class="folder-page">Iteration</a>
+						<a href="#delivery" class="folder-page">Delivery</a>
+						<a href="#retro" class="folder-page">Retrospective</a>
+					</div>
+				</div>
+			</nav>
+			<!----- MOBILE NAV MENU ----->
+  			<a href="javascript:void(0);" id="navIcon" onclick="toggleMobileNav()">Menu</a>
+		    <!----- DESKTOP FOOTER ----->
+		    <div id="footer">
+    			<p>&copy; 2022 Michael Klepacki.<br>Built from scratch with love, sweat, & tears.</p>
+    		</div>
+		</header>
+		<!---------- PROGRESS BAR ---------->
+		<div id="progressBar"></div>
+		<!---------- PAGE ---------->
+		<main id="pageWrapper">
+			<article>
+				<!---- BRIEF ---->
+				<section id="brief">
+					<div class="text-wrapper">
+							<h1>Creating an onboarding flow for Good Humans</h1>
+							<p class="lede">Good Humans is a brand-new company building an app backed by behavioral science to help its users develop eco-responsible habits that benefit themselves, their communities, and the planet.</p>
+						<div class="row">
+							<div class="column">
+								<h4>Time</h4>
+								<p>2 weeks</p>
+							</div>
+							<div class="column">
+								<h4>Role</h4>
+								<p>UX/UI Designer</p>
+							</div>
+							<div class="column">
+								<h4>Team</h4>
+								<p>Weiwen Huang (UX/UI)</p>
+							</div>
+						</div>
+					</div>
+					<div class="img-wrapper">
+						<img
+							srcset="img/good-humans-onboarding/overview-640.jpg 640w,
+									img/good-humans-onboarding/overview-768.jpg 768w,
+									img/good-humans-onboarding/overview-1024.jpg 1024w,
+									img/good-humans-onboarding/overview-1336.jpg 1336w,
+									img/good-humans-onboarding/overview-1600.jpg 1600w,
+									img/good-humans-onboarding/overview.jpg 1920w"
+							sizes="(max-width: 640px) 640px,
+									(max-width: 768px) 768px,
+									(max-width: 1024px) 1024px,
+									(max-width: 1336px) 1336px,
+									(max-width: 1600px) 1600px,
+									1920px"
+							src="img/good-humans-onboarding/overview.jpg"
+							alt="An overview of app screens from the Good Humans onboarding flow."
+						>
+					</div>
+					<div class="text-wrapper">
+						<p>Our focus was to build out just part of the MVP that <a href="https://www.instagram.com/goodhumans.me/">Good Humans</a> would need to launch in 2022. Specifically, we’d be crafting the onboarding process in order to introduce the users to the app, and importantly, vice versa.</p>
+						<p>As a brand new app with a subscription model, we would need to use the onboarding screens to pitch the idea quickly and effectively to new downloaders. We must efficiently communicate the value proposition of the app model.</p>
+						<p>But crucially, we also have to get to know our users themselves. The idea of the app is to provide personalized action plans with steps each user can take to reduce their environmental impact. In order to provide personalization, we must first know whom we're personalizing for. This meant a questionnaire to assess where users already are on their personal eco-journey, and where they would like to focus their energy.</p>
+					</div>
+				</section>
+				<!---- RESEARCH ---->
+				<section id="research">
+					<div class="text-wrapper">
+						<h2>Research & insights</h2>
+						<p>We began with an <a target="blank" href="https://forms.gle/uioU8AzyijpTfpH29">online survey</a> that generated 98 responses, and by conducting in-depth interviews with five people within our expanded network whom we knew were concerned with their environmental impact to some, if not a great, degree.</p>
+						<p>From this research, we gained some key insights:</p>
+						<ul class="key-points">
+							<li>73% of survey respondents feel lost or overwhelmed at least some of the time when trying to manage their eco-impact.</li>
+							<li>Feelings of guilt and anxiety are common. Users want help, but don't want to feel judged.</li>
+							<li>Users don’t simply want to be told what to do—they want to be given action to take, step-by-step, in a way that feels manageable.</li>
+							<li>84% would be interested in an app that provides guidance and recommendations.</li>
+						</ul>
+						<p>So the good news was that there’s a clear place in the market for Good Humans and an interest in the product. The difficult news is that managing one’s environmental impact is a heavy subject—so <strong>tone and emphasizing personalization would be key</strong>  as we created the onboarding flow.</p>
+						<p>Using these insights we crafted a persona, Camille, to capture the pain points and frustrations of our target users.</p>
+					</div>
+					<div class="img-wrapper">
+						<img class="js-scroll"
+							srcset="img/good-humans-onboarding/persona-640.png 640w,
+									img/good-humans-onboarding/persona-768.png 768w,
+									img/good-humans-onboarding/persona-1024.png 1024w,
+									img/good-humans-onboarding/persona-1336.png 1336w,
+									img/good-humans-onboarding/persona-1600.png 1600w,
+									img/good-humans-onboarding/persona.png 1920w"
+							sizes="(max-width: 640px) 640px,
+									(max-width: 768px) 768px,
+									(max-width: 1024px) 1024px,
+									(max-width: 1336px) 1336px,
+									(max-width: 1600px) 1600px,
+									1920px"
+							src="img/good-humans-onboarding/persona.png"
+							alt="Persona: Camille. Quote: 'I’m always thinking about the environment to some degree... it’s a constant, low-level anxiety.' Goals & Ambitions: Minimize waste and slowly transition to a zero-waste lifestyle. Be more mindful of her everyday purchases—buy fewer, local goods. Frustrations: Unsure where to find stores nearby that sell local and sustainably-sourced goods. Can feel discouraged by weight of living a low-waste lifestyle."
+						>
+					</div>
+					<div class="text-wrapper">
+						<h3>Hypothesis statement</h3>
+						<p>We believe <em>onboarding users to learn their personal priorities and concerns</em> in order to <em>deliver actionable coaching</em> to people who are ready to continue to reduce their environmental impact despite sometimes feeling overwhelmed will <em>encourage them to commit to further lifestyle changes</em>.</p>
+					</div>
+				</section>
+				<!---- IDEATION ---->
+				<section id="ideation">
+					<div class="text-wrapper">
+						<h2>Ideation</h2>
+						<p>Knowing we would be asking users which aspects of environmental impact they felt most passionately about, we began with a round of open card sorting so we could find a shared mental model of categories.</p>
+						<p>We then began sketching low-fi screens to start piecing together the steps of the onboarding process.</p>
+					</div>
+					<div class="img-wrapper">
+						<img class="js-scroll"
+							srcset="img/good-humans-onboarding/lowFi-640.png 640w,
+									img/good-humans-onboarding/lowFi-768.png 768w,
+									img/good-humans-onboarding/lowFi-1024.png 1024w,
+									img/good-humans-onboarding/lowFi-1336.png 1336w,
+									img/good-humans-onboarding/lowFi-1600.png 1600w,
+									img/good-humans-onboarding/lowFi.png 1920w"
+							sizes="(max-width: 640px) 640px,
+									(max-width: 768px) 768px,
+									(max-width: 1024px) 1024px,
+									(max-width: 1336px) 1336px,
+									(max-width: 1600px) 1600px,
+									1920px"
+							src="img/good-humans-onboarding/lowFi.png"
+							alt="Early hand-drawn sketches of onboarding screens in low fidelity."
+						>
+					</div>
+					<div class="text-wrapper">
+						<p>With these, we ran five concept tests and then settled on a user flow that we would use to begin creating a mid-fi prototype. The key part of the user flow was determining exactly which questions we would ask the user, and in what order.</p>
+					</div>
+					<div class="img-wrapper">
+						<img class="js-scroll"
+							srcset="img/good-humans-onboarding/userFlow-640.png 640w,
+									img/good-humans-onboarding/userFlow-768.png 768w,
+									img/good-humans-onboarding/userFlow-1024.png 1024w,
+									img/good-humans-onboarding/userFlow-1336.png 1336w,
+									img/good-humans-onboarding/userFlow-1600.png 1600w,
+									img/good-humans-onboarding/userFlow.png 1920w"
+							sizes="(max-width: 640px) 640px,
+									(max-width: 768px) 768px,
+									(max-width: 1024px) 1024px,
+									(max-width: 1336px) 1336px,
+									(max-width: 1600px) 1600px,
+									1920px"
+							src="img/good-humans-onboarding/userFlow.png"
+							alt="A snapshot of the user flow diagram displaying question branches."
+						>
+					</div>
+				</section>	
+				<!---- ITERATION ---->
+				<section id="iteration">
+					<div class="text-wrapper">
+						<h2>Testing & iterations</h2>
+						<p>With our mid-fi prototype, we began usability tests which opened our eyes to some aspects that could be improved.</p>
+						<h3>Information density</h3>
+						<p>Our initial design for the screen where the user selects their biggest environmental priority wasted too much space, so we increased the information density.</p>
+					</div>
+					<div class="img-wrapper">
+						<img class="js-scroll"
+							srcset="img/good-humans-onboarding/iterationsDensity-640.png 640w,
+									img/good-humans-onboarding/iterationsDensity-768.png 768w,
+									img/good-humans-onboarding/iterationsDensity-1024.png 1024w,
+									img/good-humans-onboarding/iterationsDensity-1336.png 1336w,
+									img/good-humans-onboarding/iterationsDensity-1600.png 1600w,
+									img/good-humans-onboarding/iterationsDensity.png 1920w"
+							sizes="(max-width: 640px) 640px,
+									(max-width: 768px) 768px,
+									(max-width: 1024px) 1024px,
+									(max-width: 1336px) 1336px,
+									(max-width: 1600px) 1600px,
+									1920px"
+							src="img/good-humans-onboarding/iterationsDensity.png"
+							alt="A comparison of the before and after screens showing the increase in information density."
+						>
+					</div>
+					<div class="text-wrapper">
+						<h3>Too restrictive</h3>
+						<p>Speaking of environmental priorities, our first iteration only allowed the user to pick one. Our testers universally felt this was too restrictive, so we upped the selection to two.</p>
+					</div>
+					<div class="img-wrapper">
+						<img class="js-scroll"
+							srcset="img/good-humans-onboarding/iterationsChoice-640.png 640w,
+									img/good-humans-onboarding/iterationsChoice-768.png 768w,
+									img/good-humans-onboarding/iterationsChoice-1024.png 1024w,
+									img/good-humans-onboarding/iterationsChoice-1336.png 1336w,
+									img/good-humans-onboarding/iterationsChoice-1600.png 1600w,
+									img/good-humans-onboarding/iterationsChoice.png 1920w"
+							sizes="(max-width: 640px) 640px,
+									(max-width: 768px) 768px,
+									(max-width: 1024px) 1024px,
+									(max-width: 1336px) 1336px,
+									(max-width: 1600px) 1600px,
+									1920px"
+							src="img/good-humans-onboarding/iterationsChoice.png"
+							alt="A comparison of the before and after screens showing the increase in user choice."
+						>
+					</div>
+					<div class="text-wrapper">
+						<h3>Expected control placement</h3>
+						<p>We also made plenty of other smaller changes, like keeping the placement of interactive elements consistent from screen to screen throughout the questionnaire.</p>
+					</div>
+					<div class="img-wrapper">
+						<img class="js-scroll"
+							srcset="img/good-humans-onboarding/iterationsPattern-640.png 640w,
+									img/good-humans-onboarding/iterationsPattern-768.png 768w,
+									img/good-humans-onboarding/iterationsPattern-1024.png 1024w,
+									img/good-humans-onboarding/iterationsPattern-1336.png 1336w,
+									img/good-humans-onboarding/iterationsPattern-1600.png 1600w,
+									img/good-humans-onboarding/iterationsPattern.png 1920w"
+							sizes="(max-width: 640px) 640px,
+									(max-width: 768px) 768px,
+									(max-width: 1024px) 1024px,
+									(max-width: 1336px) 1336px,
+									(max-width: 1600px) 1600px,
+									1920px"
+							src="img/good-humans-onboarding/iterationsPattern.png"
+							alt="A comparison of the before and after screens showing the movement of interactive elements to a more consistent location."
+						>
+					</div>
+					<div class="text-wrapper">
+						<p>Finally we were left with an onboarding flow that consists of:</p>
+						<ul>
+							<li>a quick explanation of the app’s mission while ensuring the user that their actions make a difference,</li>
+							<li>a questionnaire that assesses user’s priorities,</li>
+							<li>a hint at the action plan they can expect and a commitment from the user,</li>
+							<li>an overview of the pricing and trial structure,</li>
+						</ul>
+						<p>and finally brings the user to the home page of the app, featuring their personalized plans.</p>
+						<h3>High fidelity</h3>
+						<p>With our user flow iterations complete, it was time to define the visual style and move into hi-fi.</p>
+						<p>Based on our user and competitive research, we knew we wanted the app to have a tone that was:</p>
+						<ul>
+							<li>warm,</li>
+							<li>soft,</li>
+							<li>and inviting.</li>
+						</ul>
+						<p>It was also important to the clients that the app interface utilized dark mode. Darker colors consume less energy—especially with modern OLED screens—so designing the app to prolong battery life was a great way for Good Humans to practice what they preach.</p>
+						<p>With these principles in mind, we crafted a moodboard that they were very happy with.</p>
+					</div>
+					<div class="img-wrapper">
+						<img class="js-scroll"
+							srcset="img/good-humans-onboarding/moodboard-640.png 640w,
+									img/good-humans-onboarding/moodboard-768.png 768w,
+									img/good-humans-onboarding/moodboard-1024.png 1024w,
+									img/good-humans-onboarding/moodboard-1336.png 1336w,
+									img/good-humans-onboarding/moodboard-1600.png 1600w,
+									img/good-humans-onboarding/moodboard.png 1920w"
+							sizes="(max-width: 640px) 640px,
+									(max-width: 768px) 768px,
+									(max-width: 1024px) 1024px,
+									(max-width: 1336px) 1336px,
+									(max-width: 1600px) 1600px,
+									1920px"
+							src="img/good-humans-onboarding/moodboard.png"
+							alt="The moodboard we crafted for the app, featuring soft, green earth tones contrasted with scattered, warm pinks and oranges. Lots of illustrative hills and soft curves."
+						>
+					</div>
+				</section>
+				<!---- DELIVERY ---->
+				<section id="delivery">
+					<div class="text-wrapper">	
+						<h2>Delivering the final prototype</h2>
+						<p>After exploring a few different styles based on our moodboard and running desirability tests, we settled on one that leaned into the greener earth tones and felt appropriately soft and inspiring. Specifically for the onboarding experience, we wanted to invite the user into an uplifting world with a sense of forward movement.</p>
+					</div>
+					<div class="img-wrapper">
+						<iframe class="figma-embed" loading="lazy" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F0TyFpAxMaffjWmYMA2dpF0%2FGood-Humans%253A-Master-Figma-%25E2%2580%2593-For-Portfolio%3Fpage-id%3D232%253A12205%26node-id%3D232%253A12258%26viewport%3D241%252C48%252C0.05%26scaling%3Dscale-down%26starting-point-node-id%3D232%253A12206" allowfullscreen></iframe>
+					</div>
+					<div class="text-wrapper">
+						<p>In addition to the prototype, we delivered a style guide that could be used as the rest of the app is built out, which includes text styles, a color palette, an icon pack, and styles for interactive elements in all of their states.</p>
+					</div>
+				</section>
+				<!---- RETROSPECTIVE ---->	
+				<section id="retro">
+					<div class="text-wrapper">
+						<h2>Retrospective</h2>
+						<p>After the completion of this project, my design partner and I were asked by Good Humans to continue working with the team to design the rest of the app.</p>
+						<p>The clients made it clear from the beginning that putting the user first is a top priority for them, and this project was a great opportunity for me to align user desires with the business needs of a brand-new startup. I’m excited to continue working with Good Humans and help bring the app to life.</p>
+					</div>
+				</section>	
+			</article>
+			<!---------- READ MORE ---------->
+			<div class="read-more-links">
+				<div class="read-prev">
+					<a href="">
+						<h5></h5>
+						<p></p>
+					</a>
+				</div>
+				<div class="read-next">
+					<a href="case-study-meditation.html">
+						<h5>Older →</h5>
+						<p>Case study: meditation app for NWI</p>
+					</a>
+				</div>
+			</div>
+        </main>
+		<!---------- MOBILE FOOTER ---------->
+		<div id="mobileFooter">
+			<p>&copy; 2021 Michael Klepacki. All rights reserved.<br>Built from scratch with love, sweat, & tears.</p>
+		</div>
+	</body>
+</html>
